@@ -38,12 +38,14 @@ ROWS_PER_PAGE     = 10
 LEDGER_PAGES      = 50        # emits SG-0001 ... SG-0500, pre-printed
 RECEIPT_PAGES     = 50        # separate sequence
 RECEIPT_PREFIX    = "R-"
+MEMO_PAGES        = 50        # memo / consignment slips (separate sequence)
+MEMO_PREFIX       = "M-"
 CURRENCY_DEFAULT  = "LKR"
 PAGE_SIZE         = "A5"      # A5 | A4
-INCLUDE_MEMO_SLIP = False     # see Open decisions (memo / consignment slip)
-PURCHASE_MODE     = "single"  # single | parcel  (see Open decisions)
+INCLUDE_MEMO_SLIP = True      # emit a memo / consignment slip pad
+PURCHASE_MODE     = "both"    # single | parcel | both
 
-VERSION = "1.0.0"
+VERSION = "1.1.0"
 
 # --------------------------------------------------------------------------- #
 # Palette
@@ -329,6 +331,18 @@ def draw_system(c):
         "Date, Currency — then write each buy on its own line.",
         left_x, y, FONT_SERIF, 9.5, INK, col_w, 13)
 
+    if PURCHASE_MODE in ("parcel", "both"):
+        y -= 14
+        y = heading(c, "Parcels", left_x, y)
+        parent = serial(SERIAL_PREFIX, START_SERIAL)
+        y = paragraph(
+            c,
+            f"A parcel shares one serial as its parent — {parent}. After "
+            f"sorting, split it into children ({parent}-a, -b, …) in Notion and "
+            f"the media folders. The ledger row stays the parent; record the "
+            f"split in Notes.",
+            left_x, y, FONT_SERIF, 9.5, INK, col_w, 13)
+
     # ----- Right column ------------------------------------------------------
     y = top
     y = heading(c, "One rule for media", right_x, y)
@@ -373,11 +387,21 @@ def draw_system(c):
 
     y -= 2
     y = heading(c, "Supplier", right_x, y)
-    paragraph(
+    y = paragraph(
         c,
         "Use a code, never the name. Keep real contacts in a separate, "
         "private list.",
         right_x, y, FONT_SERIF, 9.5, INK, col_w, 13)
+
+    if INCLUDE_MEMO_SLIP:
+        y -= 12
+        y = heading(c, "Memo / consignment", right_x, y)
+        y = paragraph(
+            c,
+            f"A stone taken on memo is not a buy. Record it on the memo slip "
+            f"({serial(MEMO_PREFIX, START_SERIAL)}), never the ledger — it stays "
+            f"the owner's until you buy it.",
+            right_x, y, FONT_SERIF, 9.5, INK, col_w, 13)
 
     draw_footer(c, "Asking · My offer · Final are your negotiation trail — "
                    "never on the supplier copy.")
@@ -576,6 +600,71 @@ def draw_receipt_page(c, n):
 
 
 # --------------------------------------------------------------------------- #
+# Memo / consignment pad — for stones held but not yet bought.
+# Separate M- sequence, one per page. A memo is not a purchase: it records the
+# declared value, a return-by date, and who carries the loss while we hold it.
+# --------------------------------------------------------------------------- #
+def draw_memo_page(c, n):
+    fill_page(c)
+    m = 24
+    c.setStrokeColor(NAVY)
+    c.setLineWidth(1.0)
+    c.rect(m, m, PW - 2 * m, PH - 2 * m, fill=0, stroke=1)
+
+    cx = PW / 2
+    c.setFont(FONT_SANS_BOLD, 22)
+    c.setFillColor(NAVY)
+    c.drawCentredString(cx, PH - 60, "SURAH GEMS")
+    tracked(c, "CEYLON SAPPHIRE & SPINEL · BERUWALA, CEYLON",
+            cx, PH - 76, FONT_SANS, 7.5, GREY, 2, "center")
+    tracked(c, "MEMO · STONE ON CONSIGNMENT", cx, PH - 99,
+            FONT_SANS, 11, INK, 3, "center")
+
+    tracked(c, "No. " + serial(MEMO_PREFIX, n),
+            PW - m - 12, PH - m - 22, FONT_SANS_BOLD, 11, NAVY, 0.5, "right")
+
+    c.setStrokeColor(HAIRLINE)
+    c.setLineWidth(0.6)
+    c.line(m + 40, PH - 113, PW - m - 40, PH - 113)
+
+    left = m + 40
+    right_col = cx + 30
+    field_w_l = cx - 30 - left
+    field_w_r = (PW - m - 40) - right_col
+    full_w = (PW - m - 40) - left
+
+    labeled_rule(c, left, PH - 142, field_w_l, "Date")
+    labeled_rule(c, right_col, PH - 142, field_w_r, "Return by")
+
+    labeled_rule(c, left, PH - 178, field_w_l, "Owner / supplier name")
+    labeled_rule(c, right_col, PH - 178, field_w_r, "Weight (approx)")
+
+    labeled_rule(c, left, PH - 214, full_w, "Description")
+
+    labeled_rule(c, left, PH - 250, field_w_l,
+                 f"Declared value ( {CURRENCY_DEFAULT} )")
+    labeled_rule(c, right_col, PH - 250, field_w_r,
+                 "Risk of loss while held")
+
+    # Signatures.
+    sig_y = m + 54
+    sig_w = full_w / 2 - 20
+    c.setStrokeColor(INK)
+    c.setLineWidth(0.6)
+    c.line(left, sig_y, left + sig_w, sig_y)
+    c.line(right_col, sig_y, right_col + sig_w, sig_y)
+    tracked(c, "OWNER / SUPPLIER SIGNATURE", left, sig_y - 11, FONT_SANS, 7, GREY, 1)
+    tracked(c, "RECEIVED ON MEMO BY — SURAH GEMS", right_col, sig_y - 11,
+            FONT_SANS, 7, GREY, 1)
+
+    c.setFont(FONT_SERIF_ITALIC, 8.5)
+    c.setFillColor(GREY)
+    c.drawCentredString(cx, m + 14,
+                        "A memo is not a purchase — the stone stays the owner's "
+                        "until bought. Return by the date above.")
+
+
+# --------------------------------------------------------------------------- #
 # Builders
 # --------------------------------------------------------------------------- #
 def build_book(path):
@@ -598,6 +687,16 @@ def build_receipts(path):
     c.setAuthor("Surah Gems")
     for n in range(START_SERIAL, START_SERIAL + RECEIPT_PAGES):
         draw_receipt_page(c, n)
+        c.showPage()
+    c.save()
+
+
+def build_memos(path):
+    c = canvas.Canvas(path, pagesize=PAGE)
+    c.setTitle("Surah Gems — Memo / Consignment Slips")
+    c.setAuthor("Surah Gems")
+    for n in range(START_SERIAL, START_SERIAL + MEMO_PAGES):
+        draw_memo_page(c, n)
         c.showPage()
     c.save()
 
@@ -690,6 +789,15 @@ def main():
           f"({RECEIPT_PAGES} pages)")
     print(f"  → {os.path.relpath(book, ROOT)}")
     print(f"  → {os.path.relpath(receipts, ROOT)}")
+
+    if INCLUDE_MEMO_SLIP:
+        memos = os.path.join(OUTPUT_DIR,
+                             f"SurahGems_MemoSlips_v{VERSION}_{stamp}.pdf")
+        build_memos(memos)
+        print(f"  memos:    {serial(MEMO_PREFIX, START_SERIAL)}…"
+              f"{serial(MEMO_PREFIX, START_SERIAL + MEMO_PAGES - 1)} "
+              f"({MEMO_PAGES} pages)")
+        print(f"  → {os.path.relpath(memos, ROOT)}")
 
     update_changelog()
     ensure_git_tag()

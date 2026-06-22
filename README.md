@@ -16,28 +16,35 @@ handwriting room, and a single small diamond line-mark on the cover.
 
 ## What it produces
 
-`python generate.py` writes two PDFs into `./output/`:
+`python generate.py` writes these PDFs into `./output/`:
 
 | File | Contents |
 | --- | --- |
 | `SurahGems_BuyingBook_v{VERSION}_{YYYYMMDD}.pdf` | Cover · The System · every numbered ledger page |
 | `SurahGems_Receipts_v{VERSION}_{YYYYMMDD}.pdf` | Every supplier receipt (separate `R-` run) |
+| `SurahGems_MemoSlips_v{VERSION}_{YYYYMMDD}.pdf` | Every memo / consignment slip (separate `M-` run) — only when `INCLUDE_MEMO_SLIP = True` |
 
-They are two separate print runs by design: the ledger is bound into a book,
-the receipts are a carbon-copy pad.
+They are separate print runs by design: the ledger is bound into a book; the
+receipts and memo slips are carbon-copy pads.
 
 ### Pages
 
 1. **Cover** — wordmark, diamond line-mark, `BUYING LEDGER`, and a
    `Vol. / Year` block. `CONFIDENTIAL — NOT FOR CIRCULATION`.
 2. **The System** — a one-page explanation of how the serial, the media
-   folders, and the paper/Notion split work.
+   folders, and the paper/Notion split work (plus parcel and memo guidance
+   when those modes are on).
 3. **Ledger** (× `LEDGER_PAGES`) — pre-printed serials, an info strip
    (Place / Date / Currency / Page No.), and rows with a shaded **value
    channel** (Asking · My offer · Final buy) bounded by a navy hairline.
 4. **Supplier Receipt** (× `RECEIPT_PAGES`) — one per page, minimal: Date,
    Weight, Description, Agreed price, Supplier name, and two signature lines.
    It never shows Asking, My offer, the buying serial, or the buyer's identity.
+5. **Memo / consignment slip** (× `MEMO_PAGES`, when `INCLUDE_MEMO_SLIP`) —
+   one per page on its own `M-` run: Date, Return-by date, Owner / supplier
+   name, Weight, Description, **Declared value**, a **risk-of-loss** line for
+   who carries the loss while the stone is in our hands, and two signature
+   lines. A memo is *not* a purchase — it never touches the ledger serial.
 
 ---
 
@@ -66,10 +73,12 @@ ROWS_PER_PAGE     = 10         # rows printed on each ledger page
 LEDGER_PAGES      = 50         # → SG-0001 … SG-0500, pre-printed
 RECEIPT_PAGES     = 50         # receipt pad length (separate sequence)
 RECEIPT_PREFIX    = "R-"       # receipt serial prefix
-CURRENCY_DEFAULT  = "LKR"      # shown in the ledger info strip
+MEMO_PAGES        = 50         # memo / consignment pad length (separate sequence)
+MEMO_PREFIX       = "M-"       # memo serial prefix
+CURRENCY_DEFAULT  = "LKR"      # shown in the ledger info strip / memo value
 PAGE_SIZE         = "A5"       # A5 | A4 (always landscape)
-INCLUDE_MEMO_SLIP = False      # see "Open decisions"
-PURCHASE_MODE     = "single"   # single | parcel — see "Open decisions"
+INCLUDE_MEMO_SLIP = True       # emit the memo / consignment slip pad
+PURCHASE_MODE     = "both"     # single | parcel | both
 ```
 
 `LEDGER_PAGES × ROWS_PER_PAGE` defines the total run length (50 × 10 = 500
@@ -88,7 +97,26 @@ serials by default).
 * The ledger `No.` column is **pre-printed** with the running serial. The
   generator emits a full book of numbered rows so no number can be
   hand-duplicated. **A gap is a void to be accounted for.**
-* The receipt pad has its **own** separate `R-` sequence.
+* The receipt pad has its **own** separate `R-` sequence, and the memo pad its
+  own `M-` sequence. The three runs never share numbers.
+
+### Parcels (`PURCHASE_MODE = "parcel"` or `"both"`)
+
+A parcel is bought against **one** ledger serial — the **parent** (e.g.
+`SG-0001`). After sorting, it splits into **children** — `SG-0001-a`,
+`SG-0001-b`, … — recorded in Notion and the media folders, not on a new ledger
+row:
+
+```
+/Buying/SG-0001/            ← parent (the parcel as bought)
+/Buying/SG-0001/SG-0001-a/  ← child after sorting
+/Buying/SG-0001/SG-0001-b/
+```
+
+The ledger row stays the parent; note the split (and the children) in the
+**Notes** column. The children inherit the parent's buy data and gain their own
+weight / measurements / report number in Notion. In `single` mode the suffixes
+are simply never used.
 
 ---
 
@@ -149,15 +177,15 @@ Notion view are cosmetic, **not** access control.
 
 ---
 
-## Open decisions
+## Decisions (resolved in v1.1.0)
 
-These are intentionally left at their defaults until confirmed:
+Both originally-open decisions are now settled and enabled by default:
 
-1. **`INCLUDE_MEMO_SLIP`** — do we ever take stones on memo / consignment? If
-   yes, a memo-slip variant would add: stone value, return-by date, and one
-   line for who carries the loss while the stone is in our hands.
-2. **`PURCHASE_MODE`** — single stones or parcels? In `parcel` mode a serial
-   becomes a parent (`SG-0001`) that splits into children (`SG-0001-a`,
-   `-b`, …) after sorting, reflected in the ledger Notes guidance.
-
-Both are off by default; turn them on only after deciding the rules above.
+1. **`INCLUDE_MEMO_SLIP = True`** — yes, we take stones on memo / consignment,
+   so the generator emits a memo-slip pad (`M-` run) with declared value,
+   return-by date, and a risk-of-loss line for who carries the loss while a
+   stone is in our hands. Set it back to `False` to skip that pad.
+2. **`PURCHASE_MODE = "both"`** — we buy single stones *and* parcels. A parcel
+   serial is a parent (`SG-0001`) that splits into children (`SG-0001-a`,
+   `-b`, …) after sorting; see [Parcels](#parcels-purchase_mode--parcel-or-both).
+   Use `"single"` or `"parcel"` to narrow the guidance.
