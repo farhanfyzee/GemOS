@@ -3,6 +3,7 @@
 
 # Downloaded fonts — fetched on first run, base-14 fallback otherwise
 /fonts/
+archive/fieldgemology-org/site/fonts/
 
 # Python
 __pycache__/

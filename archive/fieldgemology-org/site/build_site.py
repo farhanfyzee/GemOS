@@ -1,0 +1,359 @@
+#!/usr/bin/env python3
+"""
+Build the interactive study site for the fieldgemology.org archive.
+
+Reads every *.md file under ../ (archive/fieldgemology-org/**), dedupes the
+site-wide chrome (nav/disclaimer header + sidebar footer that repeats on
+almost every 2005-2016-era page) into a shared block table, rewrites
+internal links into in-app navigation, and embeds everything (gzip-
+compressed) plus three self-hosted fonts into a single self-contained
+index.html next to this script.
+
+Run: python3 build_site.py   (needs: pip install beautifulsoup4 html2text markdown)
+"""
+import base64
+import gzip
+import json
+import os
+import re
+import glob
+import urllib.request
+from urllib.parse import urlparse, urljoin, unquote
+
+from bs4 import BeautifulSoup
+import html2text
+import markdown as mdlib
+
+SITE_DIR = os.path.dirname(os.path.abspath(__file__))
+ARCHIVE = os.path.dirname(SITE_DIR)          # archive/fieldgemology-org/
+FONTS_DIR = os.path.join(SITE_DIR, "fonts")  # git-ignored local cache
+
+# --------------------------------------------------------------------------- #
+# Fonts — same resilient download-with-fallback pattern as ../../generate.py
+# --------------------------------------------------------------------------- #
+_R = "https://raw.githubusercontent.com"
+FONT_SPECS = {
+    "Lora-Regular": f"{_R}/cyrealtype/Lora-Cyrillic/master/fonts/ttf/Lora-Regular.ttf",
+    "Lora-Bold": f"{_R}/cyrealtype/Lora-Cyrillic/master/fonts/ttf/Lora-Bold.ttf",
+    "WorkSans-Regular": f"{_R}/weiweihuanghuang/Work-Sans/master/fonts/ttf/WorkSans-Regular.ttf",
+    "WorkSans-SemiBold": f"{_R}/weiweihuanghuang/Work-Sans/master/fonts/ttf/WorkSans-SemiBold.ttf",
+    "IBMPlexMono-Regular": f"{_R}/google/fonts/main/ofl/ibmplexmono/IBMPlexMono-Regular.ttf",
+}
+
+def fetch_fonts():
+    os.makedirs(FONTS_DIR, exist_ok=True)
+    b64 = {}
+    for key, url in FONT_SPECS.items():
+        dest = os.path.join(FONTS_DIR, key + ".ttf")
+        if not os.path.exists(dest):
+            try:
+                req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+                with urllib.request.urlopen(req, timeout=25) as resp:
+                    data = resp.read()
+                with open(dest, "wb") as fh:
+                    fh.write(data)
+            except Exception as exc:
+                print(f"  font download failed for {key}: {exc} (page will fall back to system fonts)")
+                b64[key] = ""
+                continue
+        b64[key] = base64.b64encode(open(dest, "rb").read()).decode("ascii")
+    return b64
+
+# --------------------------------------------------------------------------- #
+# Front matter
+# --------------------------------------------------------------------------- #
+FRONT_RE = re.compile(r"^---\n(.*?)\n---\n\n?", re.S)
+
+def parse_front(txt):
+    m = FRONT_RE.match(txt)
+    if not m:
+        return {}, txt
+    meta = {}
+    for line in m.group(1).split("\n"):
+        if ":" not in line:
+            continue
+        k, v = line.split(":", 1)
+        v = v.strip()
+        if v.startswith('"') and v.endswith('"'):
+            v = v[1:-1]
+        meta[k.strip()] = v
+    return meta, txt[m.end():]
+
+# --------------------------------------------------------------------------- #
+# Titles
+# --------------------------------------------------------------------------- #
+GENERIC_TITLE_RE = re.compile(r"where passion for gemology", re.I)
+
+MANUAL_TITLES = {
+    "01-original-site-2005-2009/biography-vincent-pardieu": "About the Author: Vincent Pardieu",
+    "01-original-site-2005-2009/expeditions/tajikistan-ruby-2011": "Tajikistan: Ruby (2011 update)",
+}
+
+def slug_to_title(pid):
+    base = pid.rsplit("/", 1)[-1]
+    words = re.split(r"[-_]+", base)
+    small = {"and", "or", "the", "of", "to", "a", "an", "in"}
+    out = []
+    for i, w in enumerate(words):
+        if not w:
+            continue
+        out.append(w.lower() if (w.lower() in small and i != 0) else (w[:1].upper() + w[1:]))
+    return " ".join(out)
+
+def resolve_title(pid, meta_title, inv, category):
+    if pid in MANUAL_TITLES:
+        return MANUAL_TITLES[pid]
+    is_generic = (not meta_title) or GENERIC_TITLE_RE.search(meta_title)
+    if category == "blog-post":
+        key = inv.get("title", "")
+        if key:
+            return slug_to_title(re.sub(r"[^a-zA-Z0-9]+", "-", key))
+    if category == "wp-core":
+        return f"Site placeholder — “Coming back soon” ({slug_to_title(pid)})"
+    if category == "homepage":
+        return "fieldgemology.org — homepage"
+    return slug_to_title(pid) if is_generic else meta_title
+
+# --------------------------------------------------------------------------- #
+# Link / image resolution
+# --------------------------------------------------------------------------- #
+def norm_path(url):
+    try:
+        p = urlparse(url)
+    except Exception:
+        return None
+    path = unquote(p.path).lower()
+    if path.endswith("/") and len(path) > 1:
+        path = path[:-1]
+    key = path
+    if p.query:
+        m = re.search(r"key=([^&]+)", p.query, re.I)
+        key += "?key=" + unquote(m.group(1)).lower() if m else "?" + p.query.lower()
+    return key
+
+ALIASES = {
+    "/blog_display.php?key=congress": "02-blog-2009-2016/posts/congress",
+    "/blog_display.php?key=khao ploy waen": "02-blog-2009-2016/posts/khao-ploy-waen",
+    "/blog_display.php?key=sapphire": "02-blog-2009-2016/posts/sapphire",
+}
+
+LINK_RE = re.compile(r"(!?)\[([^\]]*)\]\(([^)\s]+)(?:\s+\"[^\"]*\")?\)")
+STRAY_PIPE_RE = re.compile(r"^[\s|]+$")
+
+def strip_stray_pipes(text):
+    """html2text leaves lone-pipe artifacts from the site's nested-table
+    layout (empty cells, or a table row split from its header by the block
+    splitter). None of these carry information, so drop them."""
+    lines = [ln for ln in text.split("\n") if not STRAY_PIPE_RE.match(ln)]
+    text = "\n".join(lines)
+    text = re.sub(r"^(\s*)\|\s*\|\s*", r"\1", text)
+    text = re.sub(r"^(#{1,6}\s*)\|\s*", r"\1", text)
+    text = re.sub(r"^\s*\|\s+(?=\S)", "", text)
+    return text
+
+# --------------------------------------------------------------------------- #
+# Build
+# --------------------------------------------------------------------------- #
+def build():
+    inventory = json.load(open(f"{ARCHIVE}/inventory.json"))
+    inv_by_relpath = {e["relpath"]: e for e in inventory}
+
+    files = sorted(f for f in glob.glob(f"{ARCHIVE}/**/*.md", recursive=True) if not f.endswith("/README.md"))
+
+    pages = {}
+    for f in files:
+        rel = os.path.relpath(f, ARCHIVE)
+        pid = rel[:-3]
+        meta, body = parse_front(open(f, encoding="utf-8").read())
+        inv = inv_by_relpath.get(rel, {})
+        category = inv.get("category", "")
+        pages[pid] = dict(
+            relpath=rel,
+            title=resolve_title(pid, meta.get("title", ""), inv, category),
+            source_url=meta.get("source_url", ""),
+            capture_date=meta.get("capture_date", ""),
+            wayback_snapshot=meta.get("wayback_snapshot", ""),
+            site_era=meta.get("site_era", ""),
+            category=category,
+            body=body,
+        )
+    print("pages parsed:", len(pages))
+
+    path_to_id = {}
+    for pid, pg in pages.items():
+        k = norm_path(pg["source_url"])
+        if k and k not in path_to_id:
+            path_to_id[k] = pid
+    for k, v in ALIASES.items():
+        path_to_id.setdefault(k, v)
+
+    def resolve_link(href, base_url):
+        href = href.strip()
+        if not href or href.startswith("#"):
+            return None
+        try:
+            absu = urljoin(base_url, href)
+        except Exception:
+            return None
+        k = norm_path(absu)
+        if k in path_to_id:
+            return ("internal", path_to_id[k])
+        if "fieldgemology" in urlparse(absu).netloc.lower():
+            return ("wayback", absu)
+        return None
+
+    def rewrite_links_and_images(text, base_url, capture_ts):
+        def repl(m):
+            bang, label, href = m.group(1), m.group(2), m.group(3)
+            if bang == "!":
+                try:
+                    absu = urljoin(base_url, href)
+                except Exception:
+                    absu = href
+                src = f"https://web.archive.org/web/{capture_ts}im_/{absu}" if capture_ts else absu
+                alt = label or os.path.basename(urlparse(absu).path)
+                return f'<img class="photo" src="{src}" alt="{alt}">'
+            res = resolve_link(href, base_url)
+            if res is None:
+                return f"[{label}]({href})"
+            kind, target = res
+            return f"[{label}](#/page/{target})" if kind == "internal" else f"[{label}]({target})"
+        return LINK_RE.sub(repl, text)
+
+    def split_blocks(text):
+        return [b for b in re.split(r"\n\s*\n", text.strip()) if b.strip()]
+
+    freq = {}
+    page_blocks = {}
+    for pid, pg in pages.items():
+        blocks = split_blocks(pg["body"])
+        page_blocks[pid] = blocks
+        seen = set()
+        for b in blocks:
+            norm = re.sub(r"\s+", " ", b).strip()
+            if len(norm) < 30 or norm in seen:
+                continue
+            seen.add(norm)
+            freq[norm] = freq.get(norm, 0) + 1
+
+    CHROME_THRESHOLD = 8
+    chrome_set = {norm for norm, c in freq.items() if c >= CHROME_THRESHOLD}
+    print("distinct chrome blocks:", len(chrome_set), "/ distinct blocks:", len(freq))
+
+    def is_chrome(b):
+        return re.sub(r"\s+", " ", b).strip() in chrome_set
+
+    GAP_TOL = 2
+
+    def prefix_chrome_end(blocks):
+        hits = [i for i, b in enumerate(blocks) if is_chrome(b)]
+        if not hits or hits[0] > GAP_TOL:
+            return 0
+        last_chrome = hits[0]
+        i = last_chrome + 1
+        while i < len(blocks):
+            if is_chrome(blocks[i]):
+                last_chrome = i
+                i += 1
+            elif i - last_chrome <= GAP_TOL:
+                i += 1
+            else:
+                break
+        return last_chrome + 1
+
+    def suffix_chrome_start(blocks):
+        n = len(blocks)
+        hits = [i for i, b in enumerate(blocks) if is_chrome(b)]
+        if not hits or (n - 1 - hits[-1]) > GAP_TOL:
+            return n
+        last_chrome = hits[-1]
+        i = last_chrome - 1
+        while i >= 0:
+            if is_chrome(blocks[i]):
+                last_chrome = i
+                i -= 1
+            elif last_chrome - i <= GAP_TOL:
+                i -= 1
+            else:
+                break
+        return last_chrome
+
+    md = mdlib.Markdown(extensions=["tables", "sane_lists"])
+
+    def block_to_html(block, base_url, capture_ts):
+        md.reset()
+        block = strip_stray_pipes(block)
+        if not block.strip():
+            return ""
+        rewritten = rewrite_links_and_images(block, base_url, capture_ts)
+        try:
+            return md.convert(rewritten)
+        except Exception:
+            return f"<pre>{rewritten}</pre>"
+
+    chrome_html_cache = {}
+    chrome_counter = [0]
+
+    def get_chrome_id(norm_text, raw_block, base_url, capture_ts):
+        if norm_text not in chrome_html_cache:
+            html = block_to_html(raw_block, base_url, capture_ts)
+            cid = f"c{chrome_counter[0]}"
+            chrome_counter[0] += 1
+            chrome_html_cache[norm_text] = (cid, html)
+        return chrome_html_cache[norm_text][0]
+
+    rendered_pages = {}
+    for pid, pg in pages.items():
+        blocks = page_blocks[pid]
+        base_url = pg["source_url"]
+        ts = pg["capture_date"].replace("-", "")
+        pre_end = prefix_chrome_end(blocks)
+        suf_start = suffix_chrome_start(blocks)
+        if suf_start < pre_end:
+            suf_start = len(blocks)
+
+        segments = []
+        if pre_end > 0:
+            cids = [get_chrome_id(re.sub(r"\s+", " ", b).strip(), b, base_url, ts) for b in blocks[:pre_end]]
+            segments.append({"t": "c", "r": cids})
+        for b in blocks[pre_end:suf_start]:
+            segments.append({"t": "u", "h": block_to_html(b, base_url, ts)})
+        if suf_start < len(blocks):
+            cids = [get_chrome_id(re.sub(r"\s+", " ", b).strip(), b, base_url, ts) for b in blocks[suf_start:]]
+            segments.append({"t": "c", "r": cids})
+
+        rendered_pages[pid] = dict(
+            title=pg["title"], source_url=pg["source_url"], capture_date=pg["capture_date"],
+            wayback_snapshot=pg["wayback_snapshot"], site_era=pg["site_era"], category=pg["category"],
+            relpath=pg["relpath"], segments=segments, raw=pg["body"],
+        )
+
+    chrome_blocks_out = {cid: html for (cid, html) in chrome_html_cache.values()}
+    print("pages:", len(rendered_pages), "unique chrome blocks:", len(chrome_blocks_out))
+
+    data = {"pages": rendered_pages, "chrome": chrome_blocks_out}
+    raw = json.dumps(data, separators=(",", ":")).encode("utf-8")
+    comp = gzip.compress(raw, compresslevel=9)
+    data_b64 = base64.b64encode(comp).decode("ascii")
+    print(f"data: {len(raw)} bytes raw -> {len(comp)} gzip -> {len(data_b64)} base64")
+
+    fonts = fetch_fonts()
+    template = open(os.path.join(SITE_DIR, "template.html"), encoding="utf-8").read()
+    subs = {
+        "__FONT_LORA_REGULAR__": fonts.get("Lora-Regular", ""),
+        "__FONT_LORA_BOLD__": fonts.get("Lora-Bold", ""),
+        "__FONT_WORKSANS_REGULAR__": fonts.get("WorkSans-Regular", ""),
+        "__FONT_WORKSANS_SEMIBOLD__": fonts.get("WorkSans-SemiBold", ""),
+        "__FONT_PLEXMONO_REGULAR__": fonts.get("IBMPlexMono-Regular", ""),
+        "__DATA_B64__": data_b64,
+    }
+    for k, v in subs.items():
+        template = template.replace(k, v)
+
+    out_path = os.path.join(SITE_DIR, "index.html")
+    with open(out_path, "w", encoding="utf-8") as f:
+        f.write(template)
+    print("wrote", out_path, os.path.getsize(out_path), "bytes")
+
+if __name__ == "__main__":
+    build()

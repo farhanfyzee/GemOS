@@ -7,10 +7,12 @@ gem mining areas around the world — Kenya, Tanzania, Madagascar, Sri Lanka,
 Myanmar, Cambodia, Vietnam, Laos, Afghanistan, Pakistan, Tajikistan, China,
 Colombia, Mozambique — plus gemological studies (spinel, tsavorite,
 tanzanite, Pamir ruby), a lab inclusion-photo database, and, from 2009
-onward, a running expedition blog. The site was rebuilt on WordPress in
-2017–2018, then went dark; by 2019 only login-probe traffic is captured.
-The domain was later dropped and picked up by an unrelated party — captures
-from 2023–2025 are parked-domain/app noise, not the original site, and are
+onward, a running expedition blog. A WordPress relaunch was announced in
+2017 but never finished — every relaunch URL the Wayback Machine has just
+resolves to a "coming back soon" placeholder — and the site went dark
+shortly after; by 2019 only login-probe traffic is captured. The domain
+was later dropped and picked up by an unrelated party — captures from
+2023–2025 are parked-domain/app noise, not the original site, and are
 **not** part of this archive.
 
 This directory is a full-text recovery of the site, pulled from the
@@ -19,6 +21,35 @@ distinct eras so the evolution is easy to follow. Every file carries a
 front-matter block recording its original URL, the exact capture date, and
 a link back to the live Wayback Machine snapshot, so any page here can be
 traced back to its source and re-verified.
+
+## Study this archive interactively
+
+[`site/index.html`](site/index.html) is a self-contained, offline-capable
+reading app over everything below — open it directly in a browser (no
+server needed). It gives you:
+
+- A **sidebar** browsable by era → category → page.
+- A **timeline** view laid out like geological strata (newest on top),
+  color-coded by era, so you can read the site's whole history
+  chronologically and see exactly when each page was captured.
+- **Full-text search** across every page's title and body.
+- A **reader view** per page with its era/date/source badges up front,
+  the repeated site-wide navigation/disclaimer chrome collapsed (so the
+  actual writing isn't buried under ~150 words of repeated boilerplate on
+  every page) but always one click away, and — guaranteeing nothing is
+  lost to that cleanup — the exact raw captured text always available in
+  a "View raw" toggle at the bottom of every page.
+
+Regenerate it after editing the archived `.md` files with:
+
+```bash
+pip install beautifulsoup4 html2text markdown
+python3 site/build_site.py
+```
+
+It downloads the same three Google Fonts `generate.py` uses (Lora, Work
+Sans, IBM Plex Mono) into `site/fonts/` on first run and embeds them
+directly in the page, so the output has no external dependencies.
 
 ## Structure
 
@@ -84,21 +115,24 @@ posts, not distinct content — see [Scope decisions](#scope-decisions).
 
 ### 3. WordPress relaunch, 2017-2018 (`03-wordpress-relaunch-2017-2018/`)
 
-In 2017 the site was rebuilt on WordPress with a conventional
-`/field-expeditions/`, `/articles-and-studies/`, `/news-and-conference/`
-structure and topic-tag archive pages (`/tag/mozambique/`,
-`/tag/tsavorite/`, etc.). The Wayback Machine only caught a handful of the
-new long-form posts before the crawl trail runs out (Mozambique FE09,
-Kenya FE09, Cambodia expeditions, Myanmar expeditions) — those and the
-three section-index pages are what's archived here. No clean HTTP 200
-capture of the new WordPress root homepage survives (only 301 redirects
-through its `?p=NNNN` permalinks); `articles-and-studies-index.md`,
-`field-expeditions-index.md`, and `news-and-conference-index.md` are the
-closest thing to a front-page tour of this era. Tellingly, the relaunch
-kept the entire 2005-2009 site alive underneath at `/OLD-FG/`, served from
-the `old-fg.fieldgemology.org` subdomain, as a legacy fallback — same
-content as era 1, so it isn't re-archived separately. That legacy subdomain
-is what `00-homepage-timeline/home-2018.md` actually captures (there being
+In 2017 the URL structure changed to a conventional WordPress layout —
+`/field-expeditions/`, `/articles-and-studies/`, `/news-and-conference/`,
+plus URLs for specific planned posts (Mozambique FE09, Kenya FE09, Cambodia
+and Myanmar expeditions). **Correction:** every one of those 7 URLs, at
+every capture the Wayback Machine has, resolves to the same two-line
+placeholder — "FIELDGEMOLOGY.ORG is COMING BACK SOON" — not the finished
+articles their URLs promise. No actual WordPress-era article content was
+ever crawled; what's archived here is that placeholder, captured under
+each of the 7 planned URLs across August 2017, which is itself a real
+(if thin) data point: the relaunch was announced and mid-build, but never
+went live before the site went dark. No clean HTTP 200 capture of the new
+WordPress root homepage survives either (only 301 redirects through its
+`?p=NNNN` permalinks). Tellingly, the relaunch kept the entire 2005-2009
+site alive underneath at `/OLD-FG/`, served from the
+`old-fg.fieldgemology.org` subdomain, as a fallback while the rebuild was
+in progress — same content as era 1, so it isn't re-archived separately.
+That legacy subdomain is what `00-homepage-timeline/home-2018.md` actually
+captures (there being
 no surviving 200 for the real WordPress homepage at that date).
 
 ### 4. Death and domain drift, 2019-2025 (not archived)
