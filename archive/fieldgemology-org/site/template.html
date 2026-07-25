@@ -1,0 +1,708 @@
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Field Gemology, recovered — a study archive</title>
+<style>
+@font-face { font-family: "Lora"; src: url(data:font/ttf;base64,__FONT_LORA_REGULAR__) format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Lora"; src: url(data:font/ttf;base64,__FONT_LORA_BOLD__) format("truetype"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Work Sans"; src: url(data:font/ttf;base64,__FONT_WORKSANS_REGULAR__) format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Work Sans"; src: url(data:font/ttf;base64,__FONT_WORKSANS_SEMIBOLD__) format("truetype"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "IBM Plex Mono"; src: url(data:font/ttf;base64,__FONT_PLEXMONO_REGULAR__) format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
+
+:root {
+  --bg: #eae7dd;
+  --bg-raised: #f5f3ec;
+  --bg-sunken: #ddd9cc;
+  --ink: #211f1a;
+  --ink-dim: #5b574c;
+  --ink-faint: #8b8677;
+  --line: #c9c4b3;
+  --line-strong: #a39d89;
+  --accent: #1f6f5c;
+  --accent-ink: #f5f3ec;
+  --accent-dim: #2f8a73;
+  --era-original: #a3781f;
+  --era-blog: #a3435a;
+  --era-wp: #3b5c7a;
+  --era-home: #6b6182;
+  --chip-bg: rgba(0,0,0,0.05);
+  --shadow: 0 1px 2px rgba(30,25,10,0.08), 0 6px 20px rgba(30,25,10,0.06);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #15181a;
+    --bg-raised: #1c2023;
+    --bg-sunken: #101314;
+    --ink: #e9e6dc;
+    --ink-dim: #a8a396;
+    --ink-faint: #746f60;
+    --line: #33383a;
+    --line-strong: #464c4e;
+    --accent: #3fae93;
+    --accent-ink: #0d1211;
+    --accent-dim: #2c8570;
+    --era-original: #d1a53d;
+    --era-blog: #d97a91;
+    --era-wp: #7fa8cf;
+    --era-home: #a89bc4;
+    --chip-bg: rgba(255,255,255,0.06);
+    --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 8px 24px rgba(0,0,0,0.35);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #15181a; --bg-raised: #1c2023; --bg-sunken: #101314; --ink: #e9e6dc; --ink-dim: #a8a396;
+  --ink-faint: #746f60; --line: #33383a; --line-strong: #464c4e; --accent: #3fae93; --accent-ink: #0d1211;
+  --accent-dim: #2c8570; --era-original: #d1a53d; --era-blog: #d97a91; --era-wp: #7fa8cf; --era-home: #a89bc4;
+  --chip-bg: rgba(255,255,255,0.06); --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 8px 24px rgba(0,0,0,0.35);
+  color-scheme: dark;
+}
+:root[data-theme="light"] {
+  --bg: #eae7dd; --bg-raised: #f5f3ec; --bg-sunken: #ddd9cc; --ink: #211f1a; --ink-dim: #5b574c;
+  --ink-faint: #8b8677; --line: #c9c4b3; --line-strong: #a39d89; --accent: #1f6f5c; --accent-ink: #f5f3ec;
+  --accent-dim: #2f8a73; --era-original: #a3781f; --era-blog: #a3435a; --era-wp: #3b5c7a; --era-home: #6b6182;
+  --chip-bg: rgba(0,0,0,0.05); --shadow: 0 1px 2px rgba(30,25,10,0.08), 0 6px 20px rgba(30,25,10,0.06);
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent-dim); }
+a:hover { color: var(--accent); }
+::selection { background: var(--accent); color: var(--accent-ink); }
+button { font-family: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.app {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  min-height: 100vh;
+}
+@media (max-width: 820px) {
+  .app { grid-template-columns: 1fr; }
+  .sidebar { position: sticky; top: 0; z-index: 20; max-height: 60vh; overflow: auto; border-bottom: 1px solid var(--line); }
+}
+
+/* ---------- Sidebar ---------- */
+.sidebar {
+  background: var(--bg-sunken);
+  border-right: 1px solid var(--line);
+  padding: 22px 18px 40px;
+  overflow-y: auto;
+}
+.brand { margin-bottom: 4px; }
+.brand .mark { display: flex; align-items: baseline; gap: 8px; }
+.brand .mark svg { flex: none; }
+.brand h1 {
+  font-family: "Lora", serif;
+  font-weight: 700;
+  font-size: 19px;
+  margin: 0;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+.brand .sub {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10.5px;
+  color: var(--ink-faint);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-top: 6px;
+}
+.nav-tabs {
+  display: flex;
+  gap: 6px;
+  margin: 18px 0 16px;
+}
+.nav-tabs button {
+  flex: 1;
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  color: var(--ink-dim);
+  border-radius: 7px;
+  padding: 7px 6px;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+}
+.nav-tabs button.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-ink);
+}
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  padding: 8px 10px;
+  margin-bottom: 18px;
+}
+.search-box input {
+  border: none;
+  background: transparent;
+  outline: none;
+  color: var(--ink);
+  font-family: "Work Sans", sans-serif;
+  font-size: 13px;
+  width: 100%;
+}
+.search-box svg { flex: none; color: var(--ink-faint); }
+
+.tree-group { margin-bottom: 4px; }
+.tree-group > summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 4px;
+  border-radius: 6px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.tree-group > summary::-webkit-details-marker { display: none; }
+.tree-group > summary:hover { background: var(--chip-bg); }
+.tree-group > summary .chev { transition: transform .15s ease; color: var(--ink-faint); flex: none; }
+.tree-group[open] > summary .chev { transform: rotate(90deg); }
+.tree-group .dot { width: 8px; height: 8px; border-radius: 50%; flex: none; }
+.tree-group .count { margin-left: auto; font-family: "IBM Plex Mono", monospace; font-size: 10.5px; color: var(--ink-faint); }
+.tree-sub { padding-left: 20px; margin: 2px 0 10px; border-left: 1px solid var(--line); }
+.tree-cat { font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); margin: 10px 0 3px 10px; }
+.tree-link {
+  display: block;
+  padding: 4px 10px;
+  border-radius: 5px;
+  font-size: 12.5px;
+  color: var(--ink-dim);
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.tree-link:hover { background: var(--chip-bg); color: var(--ink); }
+.tree-link.current { background: var(--accent); color: var(--accent-ink); }
+
+/* ---------- Main ---------- */
+main {
+  padding: 40px 44px 80px;
+  max-width: 980px;
+}
+@media (max-width: 640px) { main { padding: 24px 18px 60px; } }
+
+.eyebrow {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin: 0 0 8px;
+}
+h1.page-title, h2.section-title {
+  font-family: "Lora", serif;
+  font-weight: 700;
+  text-wrap: balance;
+  margin: 0 0 6px;
+}
+h1.page-title { font-size: 30px; line-height: 1.2; }
+h2.section-title { font-size: 21px; margin-top: 40px; }
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  padding: 3px 9px 3px 7px;
+  border-radius: 20px;
+  background: var(--chip-bg);
+  color: var(--ink-dim);
+  border: 1px solid var(--line);
+}
+.badge .dot { width: 7px; height: 7px; border-radius: 50%; }
+
+.meta-card {
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin: 18px 0 30px;
+  box-shadow: var(--shadow);
+}
+.meta-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.meta-links { display: flex; flex-wrap: wrap; gap: 16px; font-family: "IBM Plex Mono", monospace; font-size: 11.5px; }
+.meta-links a { text-decoration: none; word-break: break-all; }
+.meta-links .lbl { color: var(--ink-faint); margin-right: 4px; }
+
+.prose {
+  font-family: "Lora", serif;
+  font-size: 16.5px;
+  line-height: 1.72;
+  max-width: 68ch;
+  color: var(--ink);
+}
+.prose h1, .prose h2, .prose h3 { font-family: "Lora", serif; text-wrap: balance; line-height: 1.3; }
+.prose h2 { font-size: 20px; margin-top: 30px; }
+.prose h3 { font-size: 17px; margin-top: 24px; }
+.prose p { margin: 0 0 16px; }
+.prose a { text-underline-offset: 2px; }
+.prose table { border-collapse: collapse; margin: 16px 0; font-size: 14.5px; }
+.prose table.overflow-wrap, .prose .table-wrap { overflow-x: auto; }
+.prose td, .prose th { border: 1px solid var(--line); padding: 6px 10px; text-align: left; vertical-align: top; }
+.prose ul, .prose ol { padding-left: 22px; margin: 0 0 16px; }
+.prose blockquote { border-left: 3px solid var(--accent); margin: 16px 0; padding: 2px 0 2px 16px; color: var(--ink-dim); }
+.prose hr { border: none; border-top: 1px solid var(--line); margin: 20px 0; }
+.photoref { display: inline-flex; align-items: center; gap: 5px; font-family: "IBM Plex Mono", monospace; font-size: 11.5px; color: var(--ink-faint); background: var(--chip-bg); border: 1px dashed var(--line-strong); border-radius: 5px; padding: 2px 7px; margin: 2px 0; }
+img.photo { max-width: 100%; border-radius: 6px; display: block; margin: 10px 0; border: 1px solid var(--line); }
+
+details.chrome-block {
+  margin: 18px 0;
+  border: 1px dashed var(--line-strong);
+  border-radius: 8px;
+  background: var(--bg-sunken);
+}
+details.chrome-block > summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 9px 14px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  color: var(--ink-faint);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+details.chrome-block > summary::-webkit-details-marker { display: none; }
+details.chrome-block > summary::before { content: "▸"; transition: transform .15s; }
+details.chrome-block[open] > summary::before { transform: rotate(90deg); }
+details.chrome-block .chrome-body { padding: 0 16px 14px; font-family: "Lora", serif; font-size: 15px; color: var(--ink-dim); }
+
+details.raw-block { margin: 32px 0 0; border-top: 1px solid var(--line); padding-top: 14px; }
+details.raw-block > summary { cursor: pointer; font-family: "IBM Plex Mono", monospace; font-size: 11.5px; color: var(--ink-faint); }
+details.raw-block pre { white-space: pre-wrap; word-break: break-word; font-family: "IBM Plex Mono", monospace; font-size: 11.5px; line-height: 1.6; background: var(--bg-sunken); border: 1px solid var(--line); border-radius: 8px; padding: 14px; margin-top: 10px; color: var(--ink-dim); }
+
+/* ---------- Timeline (stratigraphy) ---------- */
+.strata { border-left: 3px solid var(--line-strong); margin-left: 6px; }
+.strata-layer { position: relative; padding: 22px 0 22px 26px; border-bottom: 1px solid var(--line); }
+.strata-layer:last-child { border-bottom: none; }
+.strata-layer::before {
+  content: "";
+  position: absolute;
+  left: -9px; top: 26px;
+  width: 15px; height: 15px;
+  border-radius: 50%;
+  background: var(--layer-color, var(--accent));
+  border: 3px solid var(--bg);
+}
+.strata-year {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 26px;
+  font-weight: 400;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+  margin: 0 0 4px;
+}
+.strata-summary { font-size: 12.5px; color: var(--ink-faint); margin-bottom: 14px; }
+.strata-items { display: flex; flex-direction: column; gap: 3px; }
+.strata-item {
+  display: grid;
+  grid-template-columns: 62px 1fr;
+  gap: 12px;
+  align-items: baseline;
+  padding: 6px 8px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--ink);
+}
+.strata-item:hover { background: var(--chip-bg); }
+.strata-item .d { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--ink-faint); font-variant-numeric: tabular-nums; }
+.strata-item .t { font-size: 13.5px; }
+.strata-item .t .tag { font-size: 10px; color: var(--ink-faint); margin-left: 6px; }
+
+/* ---------- Search results / About lists ---------- */
+.result { display: block; padding: 14px 16px; border: 1px solid var(--line); border-radius: 9px; margin-bottom: 10px; text-decoration: none; color: var(--ink); background: var(--bg-raised); }
+.result:hover { border-color: var(--line-strong); }
+.result .rt { font-family: "Lora", serif; font-weight: 700; font-size: 15.5px; margin-bottom: 4px; }
+.result .rs { font-size: 12.5px; color: var(--ink-dim); }
+.result mark { background: var(--accent); color: var(--accent-ink); border-radius: 2px; padding: 0 1px; }
+.empty-state { color: var(--ink-faint); font-size: 13.5px; padding: 20px 0; }
+
+.legend { display: flex; flex-wrap: wrap; gap: 10px 18px; margin: 14px 0 8px; }
+.legend .item { display: flex; align-items: center; gap: 7px; font-size: 12.5px; color: var(--ink-dim); }
+.legend .dot { width: 9px; height: 9px; border-radius: 50%; flex: none; }
+
+.about-block { margin-bottom: 30px; }
+.about-block p { max-width: 68ch; font-family: "Lora", serif; font-size: 16px; line-height: 1.7; color: var(--ink); }
+.stat-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0 28px; }
+.stat { background: var(--bg-raised); border: 1px solid var(--line); border-radius: 10px; padding: 12px 16px; min-width: 108px; }
+.stat .n { font-family: "IBM Plex Mono", monospace; font-size: 22px; font-variant-numeric: tabular-nums; color: var(--accent); }
+.stat .l { font-size: 11px; color: var(--ink-faint); text-transform: uppercase; letter-spacing: .04em; margin-top: 2px; }
+
+.footer-note { margin-top: 60px; padding-top: 18px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--ink-faint); font-family: "IBM Plex Mono", monospace; }
+
+#loading { display: flex; align-items: center; justify-content: center; height: 100vh; font-family: "IBM Plex Mono", monospace; color: var(--ink-faint); font-size: 13px; }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+
+<div id="loading">loading archive…</div>
+<div class="app" id="app" hidden>
+  <nav class="sidebar" id="sidebar"></nav>
+  <main id="main"></main>
+</div>
+
+<script id="data-b64" type="application/octet-stream">__DATA_B64__</script>
+<script>
+const ERA_META = {
+  "00-homepage-timeline": { label: "Homepage timeline", color: "var(--era-home)", short: "Home" },
+  "01-original-site-2005-2009": { label: "Original site, 2005–2009", color: "var(--era-original)", short: "Original" },
+  "02-blog-2009-2016": { label: "Blog era, 2009–2016", color: "var(--era-blog)", short: "Blog" },
+  "03-wordpress-relaunch-2017-2018": { label: "WordPress relaunch, 2017–2018", color: "var(--era-wp)", short: "WP" },
+};
+const CAT_LABEL = {
+  homepage: "Homepage", core: "Core pages", articles: "Flagship articles", expeditions: "Expedition reports",
+  "kenya-tsavo-mines-2009": "Kenya · Tsavo mines (2009)", "blog-post": "Posts", "blog-index": "Listings / galleries",
+  "wp-core": "Section pages",
+};
+
+let DATA = null;
+
+async function boot() {
+  const b64 = document.getElementById('data-b64').textContent;
+  const bytes = Uint8Array.from(atob(b64), c => c.charCodeAt(0));
+  let text;
+  if (window.DecompressionStream) {
+    const ds = new DecompressionStream('gzip');
+    const stream = new Blob([bytes]).stream().pipeThrough(ds);
+    text = await new Response(stream).text();
+  } else {
+    text = new TextDecoder().decode(bytes); // fallback, unlikely needed
+  }
+  DATA = JSON.parse(text);
+  document.getElementById('loading').remove();
+  document.getElementById('app').hidden = false;
+  renderSidebar();
+  window.addEventListener('hashchange', route);
+  route();
+}
+
+function pagesList() {
+  return Object.entries(DATA.pages).map(([id, p]) => ({ id, ...p }));
+}
+
+function esc(s) { return (s || "").replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c])); }
+
+function eraColor(era) { return (ERA_META[era] || {}).color || "var(--ink-faint)"; }
+function eraLabel(era) { return (ERA_META[era] || {}).label || era; }
+function eraShort(era) { return (ERA_META[era] || {}).short || era; }
+
+/* ---------------- Sidebar ---------------- */
+function renderSidebar() {
+  const sb = document.getElementById('sidebar');
+  const all = pagesList();
+  const byEra = {};
+  for (const p of all) { (byEra[p.site_era] ||= []).push(p); }
+  const eraOrder = ["00-homepage-timeline","01-original-site-2005-2009","02-blog-2009-2016","03-wordpress-relaunch-2017-2018"];
+
+  let html = `
+    <div class="brand">
+      <div class="mark">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2 L21 9 L17.5 21 H6.5 L3 9 Z" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><path d="M3 9 H21 M7.7 9 L6.5 21 M16.3 9 L17.5 21 M12 2 L7.7 9 M12 2 L16.3 9" stroke="var(--accent)" stroke-width="1" opacity="0.55"/></svg>
+        <h1>Field Gemology, recovered</h1>
+      </div>
+      <div class="sub">fieldgemology&#8203;.org &middot; 2005&ndash;2018 &middot; ${all.length} pages</div>
+    </div>
+    <div class="nav-tabs">
+      <button data-nav="about">About</button>
+      <button data-nav="timeline">Timeline</button>
+      <button data-nav="search">Search</button>
+    </div>
+    <div class="search-box">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <input id="sidebar-search" placeholder="Search titles &amp; text…" autocomplete="off" />
+    </div>
+  `;
+
+  for (const era of eraOrder) {
+    const items = byEra[era] || [];
+    if (!items.length) continue;
+    const byCat = {};
+    for (const p of items) { (byCat[p.category || "misc"] ||= []).push(p); }
+    html += `<details class="tree-group" data-era="${era}">
+      <summary><svg class="chev" width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+      <span class="dot" style="background:${eraColor(era)}"></span> ${eraLabel(era)} <span class="count">${items.length}</span></summary>
+      <div class="tree-sub">`;
+    for (const cat of Object.keys(byCat)) {
+      html += `<div class="tree-cat">${CAT_LABEL[cat] || cat}</div>`;
+      const sorted = byCat[cat].slice().sort((a,b) => a.title.localeCompare(b.title));
+      for (const p of sorted) {
+        html += `<a class="tree-link" href="#/page/${encodeURIComponent(p.id)}" title="${esc(p.title)}">${esc(p.title)}</a>`;
+      }
+    }
+    html += `</div></details>`;
+  }
+
+  sb.innerHTML = html;
+  sb.querySelectorAll('[data-nav]').forEach(btn => btn.addEventListener('click', () => {
+    location.hash = btn.dataset.nav === 'about' ? '#/about' : `#/${btn.dataset.nav}`;
+  }));
+  const s = document.getElementById('sidebar-search');
+  s.addEventListener('keydown', e => { if (e.key === 'Enter') location.hash = '#/search?q=' + encodeURIComponent(s.value); });
+}
+
+function markActiveNav(view, pageId) {
+  document.querySelectorAll('.nav-tabs button').forEach(b => b.classList.toggle('active', b.dataset.nav === view));
+  document.querySelectorAll('.tree-link').forEach(a => a.classList.toggle('current', pageId && a.getAttribute('href') === `#/page/${encodeURIComponent(pageId)}`));
+}
+
+/* ---------------- Router ---------------- */
+function route() {
+  const hash = location.hash.replace(/^#\/?/, '');
+  const [pathPart, queryPart] = hash.split('?');
+  const parts = pathPart.split('/').filter(Boolean);
+  const params = new URLSearchParams(queryPart || "");
+  window.scrollTo(0, 0);
+  if (parts[0] === 'page' && parts[1]) {
+    renderPage(decodeURIComponent(parts.slice(1).join('/')));
+  } else if (parts[0] === 'timeline') {
+    renderTimeline();
+  } else if (parts[0] === 'search') {
+    renderSearch(params.get('q') || '');
+  } else {
+    renderAbout();
+  }
+}
+
+/* ---------------- About ---------------- */
+function renderAbout() {
+  markActiveNav('about', null);
+  const all = pagesList();
+  const counts = {};
+  for (const p of all) counts[p.site_era] = (counts[p.site_era]||0)+1;
+  const eraOrder = ["01-original-site-2005-2009","02-blog-2009-2016","03-wordpress-relaunch-2017-2018","00-homepage-timeline"];
+
+  document.getElementById('main').innerHTML = `
+    <p class="eyebrow">fieldgemology&#8203;.org &middot; recovered archive</p>
+    <h1 class="page-title">A field gemologist's site, saved from the Wayback Machine</h1>
+
+    <div class="about-block">
+      <p><strong>fieldgemology.org</strong> was gemologist Vincent Pardieu's expedition site — first‑hand
+      reports from gem mining areas around the world (Kenya, Tanzania, Madagascar, Sri Lanka, Myanmar,
+      Cambodia, Vietnam, Laos, Afghanistan, Pakistan, Tajikistan, China, Colombia, Mozambique), gemological
+      studies on spinel, tsavorite, tanzanite and Pamir ruby, an inclusion‑photo lab database, and a running
+      expedition blog. The site went dark after 2018 and the domain was later resold; this page recovers its
+      full text from the Internet Archive's Wayback Machine before that history is lost.</p>
+      <p>Everything below is organized by the site's four eras and dated to the day it was actually captured —
+      use <a href="#/timeline">Timeline</a> to read it chronologically as a dig through the site's own strata,
+      or the sections on the left to browse by era.</p>
+    </div>
+
+    <div class="stat-row">
+      <div class="stat"><div class="n">${all.length}</div><div class="l">pages recovered</div></div>
+      <div class="stat"><div class="n">${new Set(all.map(p=>p.capture_date && p.capture_date.slice(0,4))).size}</div><div class="l">years spanned</div></div>
+      <div class="stat"><div class="n">2005&#8211;18</div><div class="l">active period</div></div>
+      <div class="stat"><div class="n">3</div><div class="l">site rebuilds</div></div>
+    </div>
+
+    <h2 class="section-title">The four eras</h2>
+    <div class="legend">
+      ${eraOrder.map(e => `<div class="item"><span class="dot" style="background:${eraColor(e)}"></span>${eraLabel(e)} — ${counts[e]||0} pages</div>`).join('')}
+    </div>
+    <div class="about-block">
+      <p><strong>Original site (2005&#8211;2009).</strong> Table-laid HTML, hand-built. Two big trips —
+      a 2005 circuit through Southeast Asia and East Africa, a 2006 Central Asia trip — each with a
+      per-country report page, plus the four flagship articles later reprinted by ICA's <em>InColor</em> and on
+      ruby-sapphire.com, and an inclusion-photo lab database.</p>
+      <p><strong>Blog era (2009&#8211;2016).</strong> A keyword-tagged expedition blog replaces the static
+      report pages. 42 posts survive, tagged by place, material, or topic. Updates thin out after 2013 and
+      essentially stop by 2016.</p>
+      <p><strong>WordPress relaunch, announced but never finished (2017&#8211;2018).</strong> The URL
+      structure changed to a conventional field-expeditions / articles-and-studies / news-and-conference
+      layout, with URLs for specific planned posts (Mozambique FE09, Kenya FE09, Cambodia and Myanmar
+      expeditions). Every one of those 7 URLs, at every capture the Wayback Machine has, resolves to the
+      same two-line placeholder — &ldquo;fieldgemology.org is coming back soon&rdquo; &mdash; not the
+      finished articles their URLs promise. No WordPress-era article was ever actually crawled; the
+      relaunch was mid-build and quietly kept the whole 2005&#8211;2009 site alive underneath as a
+      fallback while it worked.</p>
+      <p><strong>Death and domain drift (2019&#8211;2025, not archived).</strong> Real captures stop in
+      January 2018. What follows is bot probe traffic, then a scatter of captures from an unrelated party
+      that later acquired the expired domain — excluded here as noise, not history.</p>
+    </div>
+
+    <h2 class="section-title">What isn't included</h2>
+    <div class="about-block">
+      <p>The Wayback Machine holds 3,131 captured URLs for this domain; most aren't distinct written content.
+      1,563 photo assets aren't mirrored (every article still shows its original image references, resolvable
+      via the Wayback links on each page). A 121-capture inclusion-photo lightbox and a 52-capture general photo
+      viewer are represented by one sample each. A 522-capture blog tag-browse index and 24 WordPress tag pages
+      are listing views over content already archived here, not fetched individually. Nothing that <em>is</em>
+      a distinct piece of writing was left out — and every page keeps its full raw captured text one click away,
+      even where the reading view above it has been tidied up.</p>
+    </div>
+
+    <div class="footer-note">Source: web.archive.org &middot; recovered ${new Date().getFullYear()} &middot; every page links back to its original Wayback Machine snapshot</div>
+  `;
+}
+
+/* ---------------- Timeline (stratigraphy) ---------------- */
+function renderTimeline() {
+  markActiveNav('timeline', null);
+  const all = pagesList().filter(p => p.capture_date);
+  const byYear = {};
+  for (const p of all) { const y = p.capture_date.slice(0,4); (byYear[y] ||= []).push(p); }
+  const years = Object.keys(byYear).sort((a,b) => b.localeCompare(a));
+
+  let html = `
+    <p class="eyebrow">Chronological</p>
+    <h1 class="page-title">Timeline</h1>
+    <div class="about-block"><p>Every recovered page, laid out like strata — newest on top. Each layer is a
+    year; the dot colors mark which era of the site was active.</p></div>
+    <div class="legend">
+      ${Object.entries(ERA_META).map(([k,v]) => `<div class="item"><span class="dot" style="background:${v.color}"></span>${v.label}</div>`).join('')}
+    </div>
+    <div class="strata">
+  `;
+  for (const y of years) {
+    const items = byYear[y].slice().sort((a,b) => a.capture_date.localeCompare(b.capture_date));
+    const eras = [...new Set(items.map(p => p.site_era))];
+    const layerColor = eraColor(eras[0]);
+    html += `<div class="strata-layer" style="--layer-color:${layerColor}">
+      <div class="strata-year">${y}</div>
+      <div class="strata-summary">${items.length} page${items.length===1?'':'s'} captured &middot; ${eras.map(eraShort).join(', ')}</div>
+      <div class="strata-items">`;
+    for (const p of items) {
+      html += `<a class="strata-item" href="#/page/${encodeURIComponent(p.id)}">
+        <span class="d">${p.capture_date.slice(5)}</span>
+        <span class="t"><span class="dot" style="background:${eraColor(p.site_era)};display:inline-block;width:6px;height:6px;border-radius:50%;margin-right:6px;"></span>${esc(p.title)}<span class="tag">${eraShort(p.site_era)}</span></span>
+      </a>`;
+    }
+    html += `</div></div>`;
+  }
+  html += `</div>`;
+  document.getElementById('main').innerHTML = html;
+}
+
+/* ---------------- Search ---------------- */
+function renderSearch(q) {
+  markActiveNav('search', null);
+  document.getElementById('main').innerHTML = `
+    <p class="eyebrow">Full text</p>
+    <h1 class="page-title">Search the archive</h1>
+    <div class="search-box" style="max-width:420px;margin:18px 0 24px;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <input id="q" placeholder="e.g. tsavorite, Pailin, Winza…" value="${esc(q)}" autocomplete="off" />
+    </div>
+    <div id="results"></div>
+  `;
+  const input = document.getElementById('q');
+  const run = () => doSearch(input.value);
+  input.addEventListener('input', run);
+  input.focus();
+  input.setSelectionRange(input.value.length, input.value.length);
+  if (q) run(); else document.getElementById('results').innerHTML = `<div class="empty-state">Start typing to search titles and full page text.</div>`;
+}
+function doSearch(q) {
+  const box = document.getElementById('results');
+  const query = q.trim().toLowerCase();
+  if (!query) { box.innerHTML = `<div class="empty-state">Start typing to search titles and full page text.</div>`; return; }
+  const all = pagesList();
+  const hits = [];
+  for (const p of all) {
+    const hay = (p.title + "\n" + p.raw).toLowerCase();
+    const idx = hay.indexOf(query);
+    if (idx === -1) continue;
+    const start = Math.max(0, idx - 60);
+    let snippet = p.raw.length ? (p.title + "\n" + p.raw).slice(start, idx + query.length + 80) : p.title;
+    snippet = snippet.replace(/\s+/g, ' ').trim();
+    hits.push({ p, idx, snippet });
+  }
+  hits.sort((a,b) => a.idx - b.idx);
+  if (!hits.length) { box.innerHTML = `<div class="empty-state">No matches for &ldquo;${esc(q)}&rdquo;.</div>`; return; }
+  box.innerHTML = hits.slice(0, 80).map(({p, snippet}) => {
+    const re = new RegExp(query.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'), 'ig');
+    const marked = esc(snippet).replace(re, m => `<mark>${m}</mark>`);
+    return `<a class="result" href="#/page/${encodeURIComponent(p.id)}">
+      <div class="rt">${esc(p.title)} <span class="badge" style="margin-left:6px;"><span class="dot" style="background:${eraColor(p.site_era)}"></span>${eraShort(p.site_era)}</span></div>
+      <div class="rs">&hellip;${marked}&hellip;</div>
+    </a>`;
+  }).join('') + (hits.length > 80 ? `<div class="empty-state">${hits.length - 80} more matches not shown — refine your search.</div>` : '');
+}
+
+/* ---------------- Page reader ---------------- */
+function renderPage(id) {
+  const p = DATA.pages[id];
+  if (!p) { renderAbout(); return; }
+  markActiveNav(null, id);
+
+  let body = '';
+  let chromeSeen = 0;
+  const chromeTotal = p.segments.filter(s => s.t === 'c').length;
+  for (const seg of p.segments) {
+    if (seg.t === 'c') {
+      chromeSeen++;
+      const label = chromeSeen === 1 && chromeTotal > 1 ? 'Shared site header (navigation / disclaimer, unchanged across most pages of this era)'
+                  : chromeTotal > 1 ? 'Shared site footer (sidebar links, unchanged across most pages of this era)'
+                  : 'Shared site navigation / disclaimer (unchanged across most pages of this era)';
+      const html = seg.r.map(r => DATA.chrome[r]).join('\n');
+      body += `<details class="chrome-block"><summary>${label} &mdash; click to expand</summary><div class="chrome-body">${html}</div></details>`;
+    } else {
+      body += seg.h;
+    }
+  }
+
+  const dateStr = p.capture_date || 'unknown date';
+  document.getElementById('main').innerHTML = `
+    <p class="eyebrow">${CAT_LABEL[p.category] || p.category || ''}</p>
+    <h1 class="page-title">${esc(p.title)}</h1>
+    <div class="meta-card">
+      <div class="meta-row">
+        <span class="badge"><span class="dot" style="background:${eraColor(p.site_era)}"></span>${eraLabel(p.site_era)}</span>
+        <span class="badge">📅 captured ${esc(dateStr)}</span>
+        <span class="badge">${esc(p.relpath)}</span>
+      </div>
+      <div class="meta-links">
+        <div><span class="lbl">original url</span><span title="Not a live link — the domain is squatted today; use the Wayback link to actually view this page.">${esc(p.source_url)}</span></div>
+        <div><span class="lbl">wayback</span><a href="${esc(p.wayback_snapshot)}" target="_blank" rel="noopener">view archived snapshot ↗</a></div>
+      </div>
+    </div>
+    <div class="prose">${body}</div>
+    <details class="raw-block"><summary>View raw captured text (unprocessed, exactly as extracted)</summary><pre>${esc(p.raw)}</pre></details>
+  `;
+}
+
+/* Photos aren't embedded in this file (only referenced) — this page's sandbox also
+   blocks cross-origin image loads outright. Swap any <img class="photo"> for a plain
+   caption, both on load failure and, as a safety net, if nothing has resolved shortly
+   after it enters the page (covers silent CSP blocks that never fire 'error'). */
+function photoFallback(img) {
+  if (!img.isConnected) return;
+  const span = document.createElement('span');
+  span.className = 'photoref';
+  span.textContent = '🖼 ' + (img.alt || 'photo not embedded — see original capture');
+  img.replaceWith(span);
+}
+document.addEventListener('error', e => {
+  const t = e.target;
+  if (t && t.classList && t.classList.contains('photo')) photoFallback(t);
+}, true);
+function sweepStuckPhotos(el) {
+  const imgs = el.matches && el.matches('img.photo') ? [el] : Array.from(el.querySelectorAll('img.photo'));
+  imgs.forEach(img => setTimeout(() => { if (img.isConnected && !img.complete) photoFallback(img); }, 1800));
+}
+new MutationObserver(muts => {
+  for (const m of muts) for (const n of m.addedNodes) if (n.nodeType === 1) sweepStuckPhotos(n);
+}).observe(document.getElementById('main') || document.body, { childList: true, subtree: true });
+
+boot();
+</script>

@@ -1,0 +1,12 @@
+# Generated PDFs — each build is reproducible from generate.py
+/output/
+
+# Downloaded fonts — fetched on first run, base-14 fallback otherwise
+/fonts/
+archive/fieldgemology-org/site/fonts/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/

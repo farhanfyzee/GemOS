@@ -1,0 +1,1127 @@
+[
+  {
+    "era": "00-homepage-timeline",
+    "category": "homepage",
+    "relpath": "00-homepage-timeline/home-2008.md",
+    "path": "/",
+    "ts": "20080107142144",
+    "orig": "http://www.fieldgemology.org:80/",
+    "title": ""
+  },
+  {
+    "era": "00-homepage-timeline",
+    "category": "homepage",
+    "relpath": "00-homepage-timeline/home-2012.md",
+    "path": "/",
+    "ts": "20120924032039",
+    "orig": "http://www.fieldgemology.org/?p=2",
+    "title": ""
+  },
+  {
+    "era": "00-homepage-timeline",
+    "category": "homepage",
+    "relpath": "00-homepage-timeline/home-2016.md",
+    "path": "/",
+    "ts": "20160819192255",
+    "orig": "http://fieldgemology.org/?p=3",
+    "title": ""
+  },
+  {
+    "era": "00-homepage-timeline",
+    "category": "homepage",
+    "relpath": "00-homepage-timeline/home-2018.md",
+    "path": "/",
+    "ts": "20180110101647",
+    "orig": "http://old-fg.fieldgemology.org:80/",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "core",
+    "relpath": "01-original-site-2005-2009/biography-vincent-pardieu.md",
+    "path": "/Biography_FG03.php",
+    "ts": "20091209121750",
+    "orig": "http://www.fieldgemology.org:80/Biography_FG03.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "core",
+    "relpath": "01-original-site-2005-2009/links.md",
+    "path": "/Links.php",
+    "ts": "20080421154811",
+    "orig": "http://www.fieldgemology.org:80/Links.php?cat_id=3",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "core",
+    "relpath": "01-original-site-2005-2009/ica-2000-presentation.md",
+    "path": "/ICA00.php",
+    "ts": "20080110182735",
+    "orig": "http://www.fieldgemology.org:80/ICA00.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "core",
+    "relpath": "01-original-site-2005-2009/summer-2005-ica-aigs-gubelin-presentation.md",
+    "path": "/Summer%202005%20ICA%20AIGS%20Gubelin%20presentation.php",
+    "ts": "20080620053008",
+    "orig": "http://www.fieldgemology.org:80/Summer%202005%20ICA%20AIGS%20Gubelin%20presentation.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "core",
+    "relpath": "01-original-site-2005-2009/laboratory-inclusion-database.md",
+    "path": "/LaboInclusion.php",
+    "ts": "20090122111904",
+    "orig": "http://www.fieldgemology.org:80/LaboInclusion.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "core",
+    "relpath": "01-original-site-2005-2009/laboratory-inclusion-detail-sample.md",
+    "path": "/LaboInclusionDetail.php",
+    "ts": "20080110182740",
+    "orig": "http://www.fieldgemology.org:80/LaboInclusionDetail.php?type=lab&id=206&sub_id=44",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "core",
+    "relpath": "01-original-site-2005-2009/photo-viewer-sample.md",
+    "path": "/showpic.php",
+    "ts": "20080324221005",
+    "orig": "http://www.fieldgemology.org:80/showpic.php?sub_id=&type=",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "core",
+    "relpath": "01-original-site-2005-2009/newsletter-01.md",
+    "path": "/newsletter/file/fieldgemologynewsletter01.htm",
+    "ts": "20080417091508",
+    "orig": "http://www.fieldgemology.org:80/newsletter/file/fieldgemologynewsletter01.htm",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "core",
+    "relpath": "01-original-site-2005-2009/category-link-index.md",
+    "path": "/cat_link.php",
+    "ts": "20080110182750",
+    "orig": "http://www.fieldgemology.org:80/cat_link.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "articles",
+    "relpath": "01-original-site-2005-2009/articles/spinel-article.md",
+    "path": "/Spinel_article.php",
+    "ts": "20090827194013",
+    "orig": "http://www.fieldgemology.org:80/Spinel_article.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "articles",
+    "relpath": "01-original-site-2005-2009/articles/tsavorite-article.md",
+    "path": "/Tsavorite_article.php",
+    "ts": "20091211011335",
+    "orig": "http://www.fieldgemology.org:80/Tsavorite_article.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "articles",
+    "relpath": "01-original-site-2005-2009/articles/tanzanite-article.md",
+    "path": "/Tanzanite_article.php",
+    "ts": "20091029035159",
+    "orig": "http://www.fieldgemology.org:80/Tanzanite_article.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "articles",
+    "relpath": "01-original-site-2005-2009/articles/pamirs-ruby-spinel-tajikistan.md",
+    "path": "/Pamirs_ruby_spinel_tajikistan.php",
+    "ts": "20091209121820",
+    "orig": "http://www.fieldgemology.org:80/Pamirs_ruby_spinel_tajikistan.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "expeditions",
+    "relpath": "01-original-site-2005-2009/expeditions/central-asia-2006-overview.md",
+    "path": "/gemology%20central%20asia%202006.php",
+    "ts": "20080620053012",
+    "orig": "http://www.fieldgemology.org:80/gemology%20central%20asia%202006.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "expeditions",
+    "relpath": "01-original-site-2005-2009/expeditions/central-asia-afghanistan.md",
+    "path": "/central%20asia%20afghanistan.php",
+    "ts": "20080110182810",
+    "orig": "http://www.fieldgemology.org:80/central%20asia%20afghanistan.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "expeditions",
+    "relpath": "01-original-site-2005-2009/expeditions/central-asia-pakistan.md",
+    "path": "/central%20asia%20pakistan.php",
+    "ts": "20080110182815",
+    "orig": "http://www.fieldgemology.org:80/central%20asia%20pakistan.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "expeditions",
+    "relpath": "01-original-site-2005-2009/expeditions/central-asia-tajikistan.md",
+    "path": "/central%20asia%20tajikistan.php",
+    "ts": "20080110182821",
+    "orig": "http://www.fieldgemology.org:80/central%20asia%20tajikistan.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "expeditions",
+    "relpath": "01-original-site-2005-2009/expeditions/central-asia-00.md",
+    "path": "/central%20asia%2000.php",
+    "ts": "20080110182805",
+    "orig": "http://www.fieldgemology.org:80/central%20asia%2000.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "expeditions",
+    "relpath": "01-original-site-2005-2009/expeditions/china-emerald-davdar.md",
+    "path": "/gemology%20china%20emerald%20davdar.php",
+    "ts": "20080412221800",
+    "orig": "http://www.fieldgemology.org:80/gemology%20china%20emerald%20davdar.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "expeditions",
+    "relpath": "01-original-site-2005-2009/expeditions/colombia-emerald.md",
+    "path": "/gemology%20colombia%20emerald.php",
+    "ts": "20080412032040",
+    "orig": "http://www.fieldgemology.org:80/gemology%20colombia%20emerald.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "expeditions",
+    "relpath": "01-original-site-2005-2009/expeditions/colombia-legacy.md",
+    "path": "/colombia.php",
+    "ts": "20080110182825",
+    "orig": "http://www.fieldgemology.org:80/colombia.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "expeditions",
+    "relpath": "01-original-site-2005-2009/expeditions/afghanistan-ruby-jagdalek-emerald-panjshir.md",
+    "path": "/gemology%20afghanistan%20ruby%20jagdalek%20emerald%20panjshir.php",
+    "ts": "20080412024217",
+    "orig": "http://www.fieldgemology.org:80/gemology%20afghanistan%20ruby%20jagdalek%20emerald%20panjshir.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "expeditions",
+    "relpath": "01-original-site-2005-2009/expeditions/pakistan-ruby-emerald-kashmir-swat.md",
+    "path": "/gemology%20pakistan%20ruby%20emerald%20kashmir%20swat.php",
+    "ts": "20080412221805",
+    "orig": "http://www.fieldgemology.org:80/gemology%20pakistan%20ruby%20emerald%20kashmir%20swat.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "expeditions",
+    "relpath": "01-original-site-2005-2009/expeditions/tajikistan-ruby-spinel-pamir.md",
+    "path": "/gemology%20tajikistan%20ruby%20spinel%20pamir.php",
+    "ts": "20080412222523",
+    "orig": "http://www.fieldgemology.org:80/gemology%20tajikistan%20ruby%20spinel%20pamir.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "expeditions",
+    "relpath": "01-original-site-2005-2009/expeditions/tajikistan-ruby-short.md",
+    "path": "/ruby%20tajikistan.php",
+    "ts": "20080828023736",
+    "orig": "http://www.fieldgemology.org/ruby%20tajikistan.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "expeditions",
+    "relpath": "01-original-site-2005-2009/expeditions/tajikistan-ruby-2011.md",
+    "path": "/gemology%20tajikistan%20ruby.php",
+    "ts": "20110509061733",
+    "orig": "http://www.fieldgemology.org:80/gemology%20tajikistan%20ruby.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "expeditions",
+    "relpath": "01-original-site-2005-2009/expeditions/burma-myanmar-mergui-pearl-south-sea.md",
+    "path": "/Gemology%20burma%20myanmar%20mergui%20pearl%20south%20sea.php",
+    "ts": "20080412234030",
+    "orig": "http://www.fieldgemology.org:80/Gemology%20burma%20myanmar%20mergui%20pearl%20south%20sea.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "expeditions",
+    "relpath": "01-original-site-2005-2009/expeditions/burma-myanmar-mogok-namya-monghsu-mergui-hpakant.md",
+    "path": "/gemology%20burma%20myanmar%20gemstone%20mogok%20namya%20mong%20hsu%20mergui%20hpakant.php",
+    "ts": "20080417091416",
+    "orig": "http://www.fieldgemology.org:80/gemology%20burma%20myanmar%20gemstone%20mogok%20namya%20mong%20hsu%20mergui%20hpakant.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "expeditions",
+    "relpath": "01-original-site-2005-2009/expeditions/burma-myanmar-legacy.md",
+    "path": "/burmapage.php",
+    "ts": "20080110182755",
+    "orig": "http://www.fieldgemology.org:80/burmapage.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "expeditions",
+    "relpath": "01-original-site-2005-2009/expeditions/cambodia-pailin-sapphire-zircon-ratanakiri-ruby-samlot.md",
+    "path": "/gemology%20cambodia%20pailin%20sapphire%20zircon%20ratanakiri%20ruby%20samlot.php",
+    "ts": "20080417091421",
+    "orig": "http://www.fieldgemology.org:80/gemology%20cambodia%20pailin%20sapphire%20zircon%20ratanakiri%20ruby%20samlot.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "expeditions",
+    "relpath": "01-original-site-2005-2009/expeditions/cambodia-legacy.md",
+    "path": "/cambodiapage.php",
+    "ts": "20080110182800",
+    "orig": "http://www.fieldgemology.org:80/cambodiapage.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "expeditions",
+    "relpath": "01-original-site-2005-2009/expeditions/laos-sapphire-houay-xai.md",
+    "path": "/gemology%20laos%20sapphire%20houay%20xai.php",
+    "ts": "20080417091438",
+    "orig": "http://www.fieldgemology.org:80/gemology%20laos%20sapphire%20houay%20xai.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "expeditions",
+    "relpath": "01-original-site-2005-2009/expeditions/laos-legacy.md",
+    "path": "/laos.php",
+    "ts": "20080110182841",
+    "orig": "http://www.fieldgemology.org:80/laos.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "expeditions",
+    "relpath": "01-original-site-2005-2009/expeditions/vietnam-2005-overview.md",
+    "path": "/gemology%20vietnam%202005.php",
+    "ts": "20080412234117",
+    "orig": "http://www.fieldgemology.org:80/gemology%20vietnam%202005.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "expeditions",
+    "relpath": "01-original-site-2005-2009/expeditions/vietnam-luc-yen-quy-chau.md",
+    "path": "/gemology%20vietnam%20ruby%20spinel%20sapphire%20luc%20yen%20quy%20chau.php",
+    "ts": "20080417091503",
+    "orig": "http://www.fieldgemology.org:80/gemology%20vietnam%20ruby%20spinel%20sapphire%20luc%20yen%20quy%20chau.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "expeditions",
+    "relpath": "01-original-site-2005-2009/expeditions/vietnam-legacy.md",
+    "path": "/vietnamapr2005.php",
+    "ts": "20080110182902",
+    "orig": "http://www.fieldgemology.org:80/vietnamapr2005.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "expeditions",
+    "relpath": "01-original-site-2005-2009/expeditions/sri-lanka-2005-overview.md",
+    "path": "/gemology%20sri%20lanka%20ceylon%202005.php",
+    "ts": "20080412234107",
+    "orig": "http://www.fieldgemology.org:80/gemology%20sri%20lanka%20ceylon%202005.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "expeditions",
+    "relpath": "01-original-site-2005-2009/expeditions/sri-lanka-ratnapura-elahera-moonstone-metiyagoda-okkampitiya.md",
+    "path": "/gemology%20sri%20lanka%20ceylon%20sapphire%20moonstone%20ratnapura%20elahera%20metiyagoda%20okkampitaya.php",
+    "ts": "20080417091448",
+    "orig": "http://www.fieldgemology.org:80/gemology%20sri%20lanka%20ceylon%20sapphire%20moonstone%20ratnapura%20elahera%20metiyagoda%20okkampitaya.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "expeditions",
+    "relpath": "01-original-site-2005-2009/expeditions/sri-lanka-legacy.md",
+    "path": "/srilankamay2005.php",
+    "ts": "20080110182851",
+    "orig": "http://www.fieldgemology.org:80/srilankamay2005.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "expeditions",
+    "relpath": "01-original-site-2005-2009/expeditions/madagascar-2005-overview.md",
+    "path": "/gemology%20madagascar%202005.php",
+    "ts": "20080412234101",
+    "orig": "http://www.fieldgemology.org:80/gemology%20madagascar%202005.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "expeditions",
+    "relpath": "01-original-site-2005-2009/expeditions/madagascar-ilakaka-andranondambo-ambondromifehy-vatomandry-andilamena.md",
+    "path": "/gemology%20madagascar%20ruby%20sapphire%20ilakaka%20andranondambo%20ambondromifehy%20vatomandry%20andilamena.php",
+    "ts": "20080417091443",
+    "orig": "http://www.fieldgemology.org:80/gemology%20madagascar%20ruby%20sapphire%20ilakaka%20andranondambo%20ambondromifehy%20vatomandry%20andilamena.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "expeditions",
+    "relpath": "01-original-site-2005-2009/expeditions/madagascar-legacy.md",
+    "path": "/madajune2005.php",
+    "ts": "20080110182846",
+    "orig": "http://www.fieldgemology.org:80/madajune2005.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "expeditions",
+    "relpath": "01-original-site-2005-2009/expeditions/kenya-2005-overview.md",
+    "path": "/gemology%20kenya%202005.php",
+    "ts": "20080412234049",
+    "orig": "http://www.fieldgemology.org:80/gemology%20kenya%202005.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "expeditions",
+    "relpath": "01-original-site-2005-2009/expeditions/kenya-ruby-tsavorite-tsavo-baringo-taita-mengare-kuranze-kasigau.md",
+    "path": "/gemology%20kenya%20ruby%20tsavorite%20tsavo%20baringo%20taita%20mengare%20kuranze%20kasigau.php",
+    "ts": "20080417091433",
+    "orig": "http://www.fieldgemology.org:80/gemology%20kenya%20ruby%20tsavorite%20tsavo%20baringo%20taita%20mengare%20kuranze%20kasigau.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "expeditions",
+    "relpath": "01-original-site-2005-2009/expeditions/kenya-legacy.md",
+    "path": "/kenyajuly2005.php",
+    "ts": "20080110182836",
+    "orig": "http://www.fieldgemology.org:80/kenyajuly2005.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "expeditions",
+    "relpath": "01-original-site-2005-2009/expeditions/tanzania-2005-overview.md",
+    "path": "/gemology%20tanzania%202005.php",
+    "ts": "20080412234112",
+    "orig": "http://www.fieldgemology.org:80/gemology%20tanzania%202005.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "expeditions",
+    "relpath": "01-original-site-2005-2009/expeditions/tanzania-tunduru-songea-morogoro-merelani-umba.md",
+    "path": "/gemology%20tanzania%20ruby%20sapphire%20spinel%20tsavorite%20alexandrite%20emerald%20tunduru%20songea%20morogoro%20merelani%20umba.php",
+    "ts": "20080417091453",
+    "orig": "http://www.fieldgemology.org:80/gemology%20tanzania%20ruby%20sapphire%20spinel%20tsavorite%20alexandrite%20emerald%20tunduru%20songea%20morogoro%20merelani%20umba.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "expeditions",
+    "relpath": "01-original-site-2005-2009/expeditions/tanzania-tunduru-songea-morogoro-merelani.md",
+    "path": "/gemology%20tanzania%20ruby%20sapphire%20spinel%20tsavorite%20alexandrite%20emerald%20tunduru%20songea%20morogoro%20merelani.php",
+    "ts": "20080518172226",
+    "orig": "http://www.fieldgemology.org:80/gemology%20tanzania%20ruby%20sapphire%20spinel%20tsavorite%20alexandrite%20emerald%20tunduru%20songea%20morogoro%20merelani.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "expeditions",
+    "relpath": "01-original-site-2005-2009/expeditions/tanzania-tsavorite-alexandrite-merelani-lendanai-lemshuko-manyara.md",
+    "path": "/gemology%20tanzania%20tsavorite%20alexandrite%20emerald%20tourmaline%20merelani%20lendanai%20lemshuko%20manyara.php",
+    "ts": "20080828023615",
+    "orig": "http://www.fieldgemology.org/gemology%20tanzania%20tsavorite%20alexandrite%20emerald%20tourmaline%20merelani%20lendanai%20lemshuko%20manyara.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "expeditions",
+    "relpath": "01-original-site-2005-2009/expeditions/tanzania-dodoma-mpwapwa-winza.md",
+    "path": "/Gemology%20tanzania%20ruby%20sapphire%20dodoma%20mpwapwa%20winza.php",
+    "ts": "20090216213017",
+    "orig": "http://fieldgemology.org:80/Gemology%20tanzania%20ruby%20sapphire%20dodoma%20mpwapwa%20winza.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "expeditions",
+    "relpath": "01-original-site-2005-2009/expeditions/tanzania-legacy.md",
+    "path": "/tanzaniaaugust2005.php",
+    "ts": "20080110182856",
+    "orig": "http://www.fieldgemology.org:80/tanzaniaaugust2005.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "expeditions",
+    "relpath": "01-original-site-2005-2009/expeditions/south-east-asia-summer-2005-overview.md",
+    "path": "/gemology%20south%20east%20asia%20summer%202005.php",
+    "ts": "20080412222518",
+    "orig": "http://www.fieldgemology.org:80/gemology%20south%20east%20asia%20summer%202005.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "expeditions",
+    "relpath": "01-original-site-2005-2009/expeditions/travel-gem-market-mine-overview.md",
+    "path": "/gemology%20travel%20gem%20gemstone%20market%20mine.php",
+    "ts": "20080417091459",
+    "orig": "http://www.fieldgemology.org:80/gemology%20travel%20gem%20gemstone%20market%20mine.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "expeditions",
+    "relpath": "01-original-site-2005-2009/expeditions/inclusion-gemstone-overview.md",
+    "path": "/gemology%20inclusion%20gem%20gemstone.php",
+    "ts": "20080417091427",
+    "orig": "http://www.fieldgemology.org:80/gemology%20inclusion%20gem%20gemstone.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "expeditions",
+    "relpath": "01-original-site-2005-2009/expeditions/painite.md",
+    "path": "/painite.php",
+    "ts": "20080828024121",
+    "orig": "http://www.fieldgemology.org/painite.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "kenya-tsavo-mines-2009",
+    "relpath": "01-original-site-2005-2009/kenya-tsavo-mines-2009/baringo-ruby-corby.md",
+    "path": "/Gemology%20kenya%20baringo%20ruby%20corby.php",
+    "ts": "20091210234702",
+    "orig": "http://www.fieldgemology.org:80/Gemology%20kenya%20baringo%20ruby%20corby.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "kenya-tsavo-mines-2009",
+    "relpath": "01-original-site-2005-2009/kenya-tsavo-mines-2009/ruby-simba.md",
+    "path": "/Gemology%20kenya%20ruby%20simba.php",
+    "ts": "20091210234714",
+    "orig": "http://www.fieldgemology.org:80/Gemology%20kenya%20ruby%20simba.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "kenya-tsavo-mines-2009",
+    "relpath": "01-original-site-2005-2009/kenya-tsavo-mines-2009/tsavo-garnet.md",
+    "path": "/Gemology%20kenya%20tsavo%20garnet.php",
+    "ts": "20091210234723",
+    "orig": "http://www.fieldgemology.org:80/Gemology%20kenya%20tsavo%20garnet.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "kenya-tsavo-mines-2009",
+    "relpath": "01-original-site-2005-2009/kenya-tsavo-mines-2009/tsavorite-nadan-kuranze.md",
+    "path": "/Gemology%20kenya%20tsavo%20kuranze%20tsavorite%20nadan.php",
+    "ts": "20091210234728",
+    "orig": "http://www.fieldgemology.org:80/Gemology%20kenya%20tsavo%20kuranze%20tsavorite%20nadan.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "kenya-tsavo-mines-2009",
+    "relpath": "01-original-site-2005-2009/kenya-tsavo-mines-2009/ruby-aqua.md",
+    "path": "/Gemology%20kenya%20tsavo%20ruby%20aqua.php",
+    "ts": "20091005224400",
+    "orig": "http://www.fieldgemology.org:80/Gemology%20kenya%20tsavo%20ruby%20aqua.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "kenya-tsavo-mines-2009",
+    "relpath": "01-original-site-2005-2009/kenya-tsavo-mines-2009/ruby-equator.md",
+    "path": "/Gemology%20kenya%20tsavo%20ruby%20equator.php",
+    "ts": "20091210234735",
+    "orig": "http://www.fieldgemology.org:80/Gemology%20kenya%20tsavo%20ruby%20equator.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "kenya-tsavo-mines-2009",
+    "relpath": "01-original-site-2005-2009/kenya-tsavo-mines-2009/ruby-hardrock.md",
+    "path": "/Gemology%20kenya%20tsavo%20ruby%20hardrock.php",
+    "ts": "20091210234742",
+    "orig": "http://www.fieldgemology.org:80/Gemology%20kenya%20tsavo%20ruby%20hardrock.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "kenya-tsavo-mines-2009",
+    "relpath": "01-original-site-2005-2009/kenya-tsavo-mines-2009/ruby-rockland.md",
+    "path": "/Gemology%20kenya%20tsavo%20ruby%20rockland.php",
+    "ts": "20091209121753",
+    "orig": "http://www.fieldgemology.org:80/Gemology%20kenya%20tsavo%20ruby%20rockland.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "kenya-tsavo-mines-2009",
+    "relpath": "01-original-site-2005-2009/kenya-tsavo-mines-2009/tsavorite-baraka.md",
+    "path": "/Gemology%20kenya%20tsavo%20tsavorite%20baraka.php",
+    "ts": "20091219042833",
+    "orig": "http://www.fieldgemology.org:80/Gemology%20kenya%20tsavo%20tsavorite%20baraka.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "kenya-tsavo-mines-2009",
+    "relpath": "01-original-site-2005-2009/kenya-tsavo-mines-2009/tsavorite-bocrest.md",
+    "path": "/Gemology%20kenya%20tsavo%20tsavorite%20bocrest.php",
+    "ts": "20091210234751",
+    "orig": "http://www.fieldgemology.org:80/Gemology%20kenya%20tsavo%20tsavorite%20bocrest.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "kenya-tsavo-mines-2009",
+    "relpath": "01-original-site-2005-2009/kenya-tsavo-mines-2009/tsavorite-bridges.md",
+    "path": "/Gemology%20kenya%20tsavo%20tsavorite%20bridges.php",
+    "ts": "20091210234756",
+    "orig": "http://www.fieldgemology.org:80/Gemology%20kenya%20tsavo%20tsavorite%20bridges.php",
+    "title": ""
+  },
+  {
+    "era": "01-original-site-2005-2009",
+    "category": "kenya-tsavo-mines-2009",
+    "relpath": "01-original-site-2005-2009/kenya-tsavo-mines-2009/tsavorite-travolite.md",
+    "path": "/Gemology%20kenya%20tsavo%20tsavorite%20travolite.php",
+    "ts": "20091210234805",
+    "orig": "http://www.fieldgemology.org:80/Gemology%20kenya%20tsavo%20tsavorite%20travolite.php",
+    "title": ""
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-post",
+    "relpath": "02-blog-2009-2016/posts/badakshan.md",
+    "path": "/blog_display.php",
+    "ts": "20120924221234",
+    "orig": "http://www.fieldgemology.org/blog_display.php?id=61&key=Badakshan",
+    "title": "Badakshan"
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-post",
+    "relpath": "02-blog-2009-2016/posts/bangkok.md",
+    "path": "/blog_display.php",
+    "ts": "20160819125853",
+    "orig": "http://fieldgemology.org/blog_display.php?id=1&key=Bangkok",
+    "title": "Bangkok"
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-post",
+    "relpath": "02-blog-2009-2016/posts/bridges.md",
+    "path": "/blog_display.php",
+    "ts": "20160819184249",
+    "orig": "http://fieldgemology.org/blog_display.php?id=78&key=Bridges",
+    "title": "Bridges"
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-post",
+    "relpath": "02-blog-2009-2016/posts/china.md",
+    "path": "/blog_display.php",
+    "ts": "20120924032703",
+    "orig": "http://www.fieldgemology.org/blog_display.php?id=87&key=China",
+    "title": "China"
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-post",
+    "relpath": "02-blog-2009-2016/posts/congress.md",
+    "path": "/blog_display.php",
+    "ts": "20150225025329",
+    "orig": "http://www.fieldgemology.org/blog_display.php?id=27&key=Congress",
+    "title": "Congress"
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-post",
+    "relpath": "02-blog-2009-2016/posts/davdar.md",
+    "path": "/blog_display.php",
+    "ts": "20160819125450",
+    "orig": "http://fieldgemology.org/blog_display.php?id=73&key=Davdar",
+    "title": "Davdar"
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-post",
+    "relpath": "02-blog-2009-2016/posts/field-report-gia.md",
+    "path": "/blog_display.php",
+    "ts": "20120922223520",
+    "orig": "http://www.fieldgemology.org/blog_display.php?id=58&key=Field%20Report%20GIA",
+    "title": "Field Report GIA"
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-post",
+    "relpath": "02-blog-2009-2016/posts/gogogogo.md",
+    "path": "/blog_display.php",
+    "ts": "20160819183307",
+    "orig": "http://fieldgemology.org/blog_display.php?id=31&key=Gogogogo",
+    "title": "Gogogogo"
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-post",
+    "relpath": "02-blog-2009-2016/posts/hughes.md",
+    "path": "/blog_display.php",
+    "ts": "20160819170759",
+    "orig": "http://fieldgemology.org/blog_display.php?id=53&key=Hughes",
+    "title": "Hughes"
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-post",
+    "relpath": "02-blog-2009-2016/posts/kaghan.md",
+    "path": "/blog_display.php",
+    "ts": "20120920105346",
+    "orig": "http://www.fieldgemology.org/blog_display.php?id=59&key=Kaghan",
+    "title": "Kaghan"
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-post",
+    "relpath": "02-blog-2009-2016/posts/kashmir.md",
+    "path": "/blog_display.php",
+    "ts": "20160819130447",
+    "orig": "http://fieldgemology.org/blog_display.php?id=26&key=Kashmir",
+    "title": "Kashmir"
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-post",
+    "relpath": "02-blog-2009-2016/posts/kenya.md",
+    "path": "/blog_display.php",
+    "ts": "20110831001826",
+    "orig": "http://www.fieldgemology.org/blog_display.php?id=36&key=Kenya",
+    "title": "Kenya"
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-post",
+    "relpath": "02-blog-2009-2016/posts/khao-ploy-waen.md",
+    "path": "/blog_display.php",
+    "ts": "20160819125626",
+    "orig": "http://fieldgemology.org/blog_display.php?id=21&key=Khao%20Ploy%20Waen",
+    "title": "Khao Ploy Waen"
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-post",
+    "relpath": "02-blog-2009-2016/posts/khao-ploy-waen.md",
+    "path": "/blog_display.php",
+    "ts": "20120915190548",
+    "orig": "http://www.fieldgemology.org/blog_display.php?id=50&key=Khao%20ploy%20Waen",
+    "title": "Khao ploy Waen"
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-post",
+    "relpath": "02-blog-2009-2016/posts/mjp.md",
+    "path": "/blog_display.php",
+    "ts": "20120924032331",
+    "orig": "http://www.fieldgemology.org/blog_display.php?id=51&key=MJP",
+    "title": "MJP"
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-post",
+    "relpath": "02-blog-2009-2016/posts/mavuco.md",
+    "path": "/blog_display.php",
+    "ts": "20120925171610",
+    "orig": "http://www.fieldgemology.org/blog_display.php?id=38&key=Mavuco",
+    "title": "Mavuco"
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-post",
+    "relpath": "02-blog-2009-2016/posts/niassa.md",
+    "path": "/blog_display.php",
+    "ts": "20120922224712",
+    "orig": "http://www.fieldgemology.org/blog_display.php?id=42&key=Niassa",
+    "title": "Niassa"
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-post",
+    "relpath": "02-blog-2009-2016/posts/pailin.md",
+    "path": "/blog_display.php",
+    "ts": "20120925171445",
+    "orig": "http://www.fieldgemology.org/blog_display.php?id=82&key=Pailin",
+    "title": "Pailin"
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-post",
+    "relpath": "02-blog-2009-2016/posts/pamir.md",
+    "path": "/blog_display.php",
+    "ts": "20160819123016",
+    "orig": "http://fieldgemology.org/blog_display.php?id=72&key=Pamir",
+    "title": "Pamir"
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-post",
+    "relpath": "02-blog-2009-2016/posts/peshawar.md",
+    "path": "/blog_display.php",
+    "ts": "20160819150326",
+    "orig": "http://fieldgemology.org/blog_display.php?id=70&key=Peshawar",
+    "title": "Peshawar"
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-post",
+    "relpath": "02-blog-2009-2016/posts/quy-chau.md",
+    "path": "/blog_display.php",
+    "ts": "20160819183513",
+    "orig": "http://fieldgemology.org/blog_display.php?id=75&key=Quy%20Chau",
+    "title": "Quy Chau"
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-post",
+    "relpath": "02-blog-2009-2016/posts/richard-wise.md",
+    "path": "/blog_display.php",
+    "ts": "20120914031813",
+    "orig": "http://www.fieldgemology.org/blog_display.php?id=49&key=Richard%20Wise",
+    "title": "Richard Wise"
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-post",
+    "relpath": "02-blog-2009-2016/posts/sapphire.md",
+    "path": "/blog_display.php",
+    "ts": "20130530093555",
+    "orig": "http://www.fieldgemology.org/blog_display.php?id=90&key=Sapphire",
+    "title": "Sapphire"
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-post",
+    "relpath": "02-blog-2009-2016/posts/taita.md",
+    "path": "/blog_display.php",
+    "ts": "20160819183853",
+    "orig": "http://fieldgemology.org/blog_display.php?id=34&key=Taita",
+    "title": "Taita"
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-post",
+    "relpath": "02-blog-2009-2016/posts/tanzania.md",
+    "path": "/blog_display.php",
+    "ts": "20160819183755",
+    "orig": "http://fieldgemology.org/blog_display.php?id=62&key=Tanzania",
+    "title": "Tanzania"
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-post",
+    "relpath": "02-blog-2009-2016/posts/winza.md",
+    "path": "/blog_display.php",
+    "ts": "20120925171707",
+    "orig": "http://www.fieldgemology.org/blog_display.php?id=39&key=Winza",
+    "title": "Winza"
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-post",
+    "relpath": "02-blog-2009-2016/posts/award.md",
+    "path": "/blog_display.php",
+    "ts": "20120919023516",
+    "orig": "http://www.fieldgemology.org/blog_display.php?id=43&key=award",
+    "title": "award"
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-post",
+    "relpath": "02-blog-2009-2016/posts/black-star-sapphire.md",
+    "path": "/blog_display.php",
+    "ts": "20110927183614",
+    "orig": "http://www.fieldgemology.org/blog_display.php?id=24&key=black%20star%20sapphire",
+    "title": "black star sapphire"
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-post",
+    "relpath": "02-blog-2009-2016/posts/congress.md",
+    "path": "/blog_display.php",
+    "ts": "20110831173109",
+    "orig": "http://www.fieldgemology.org/blog_display.php?id=37&key=congress",
+    "title": "congress"
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-post",
+    "relpath": "02-blog-2009-2016/posts/conservation.md",
+    "path": "/blog_display.php",
+    "ts": "20120917132622",
+    "orig": "http://www.fieldgemology.org/blog_display.php?id=56&key=conservation",
+    "title": "conservation"
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-post",
+    "relpath": "02-blog-2009-2016/posts/emerald.md",
+    "path": "/blog_display.php",
+    "ts": "20110828193109",
+    "orig": "http://www.fieldgemology.org/blog_display.php?id=57&key=emerald",
+    "title": "emerald"
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-post",
+    "relpath": "02-blog-2009-2016/posts/garnet.md",
+    "path": "/blog_display.php",
+    "ts": "20120925172210",
+    "orig": "http://www.fieldgemology.org/blog_display.php?id=55&key=garnet",
+    "title": "garnet"
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-post",
+    "relpath": "02-blog-2009-2016/posts/glass.md",
+    "path": "/blog_display.php",
+    "ts": "20120919024642",
+    "orig": "http://www.fieldgemology.org/blog_display.php?id=45&key=glass",
+    "title": "glass"
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-post",
+    "relpath": "02-blog-2009-2016/posts/moonstone.md",
+    "path": "/blog_display.php",
+    "ts": "20160819184245",
+    "orig": "http://fieldgemology.org/blog_display.php?id=76&key=moonstone",
+    "title": "moonstone"
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-post",
+    "relpath": "02-blog-2009-2016/posts/pearl-farm.md",
+    "path": "/blog_display.php",
+    "ts": "20110831150450",
+    "orig": "http://www.fieldgemology.org/blog_display.php?id=54&key=pearl%20farm",
+    "title": "pearl farm"
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-post",
+    "relpath": "02-blog-2009-2016/posts/ruby.md",
+    "path": "/blog_display.php",
+    "ts": "20120917131623",
+    "orig": "http://www.fieldgemology.org/blog_display.php?id=44&key=ruby",
+    "title": "ruby"
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-post",
+    "relpath": "02-blog-2009-2016/posts/sapphire.md",
+    "path": "/blog_display.php",
+    "ts": "20110927211851",
+    "orig": "http://www.fieldgemology.org/blog_display.php?id=48&key=sapphire",
+    "title": "sapphire"
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-post",
+    "relpath": "02-blog-2009-2016/posts/spinel.md",
+    "path": "/blog_display.php",
+    "ts": "20121102015905",
+    "orig": "http://www.fieldgemology.org/blog_display.php?id=86&key=spinel",
+    "title": "spinel"
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-post",
+    "relpath": "02-blog-2009-2016/posts/studies.md",
+    "path": "/blog_display.php",
+    "ts": "20120924031125",
+    "orig": "http://www.fieldgemology.org/blog_display.php?id=81&key=studies",
+    "title": "studies"
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-post",
+    "relpath": "02-blog-2009-2016/posts/tanzanite.md",
+    "path": "/blog_display.php",
+    "ts": "20120924215714",
+    "orig": "http://www.fieldgemology.org/blog_display.php?id=35&key=tanzanite",
+    "title": "tanzanite"
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-post",
+    "relpath": "02-blog-2009-2016/posts/treatment.md",
+    "path": "/blog_display.php",
+    "ts": "20120922222803",
+    "orig": "http://www.fieldgemology.org/blog_display.php?id=47&key=treatment",
+    "title": "treatment"
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-post",
+    "relpath": "02-blog-2009-2016/posts/tsavorite.md",
+    "path": "/blog_display.php",
+    "ts": "20120919024618",
+    "orig": "http://www.fieldgemology.org/blog_display.php?id=85&key=tsavorite",
+    "title": "tsavorite"
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-index",
+    "relpath": "02-blog-2009-2016/blog-homepage-listing.md",
+    "path": "/blog_display.php",
+    "ts": "20091005224533",
+    "orig": "http://fieldgemology.org:80/blog_display.php?",
+    "title": ""
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-index",
+    "relpath": "02-blog-2009-2016/blog-gallery-sample.md",
+    "path": "/blog_gallery.php",
+    "ts": "20101027092855",
+    "orig": "http://www.fieldgemology.org:80/blog_gallery.php",
+    "title": ""
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-index",
+    "relpath": "02-blog-2009-2016/blog-gallery2-sample.md",
+    "path": "/blog_gallery2.php",
+    "ts": "20101026090347",
+    "orig": "http://www.fieldgemology.org:80/blog_gallery2.php?",
+    "title": ""
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-index",
+    "relpath": "02-blog-2009-2016/blog-gallery3-sample.md",
+    "path": "/blog_gallery3.php",
+    "ts": "20101026090415",
+    "orig": "http://www.fieldgemology.org:80/blog_gallery3.php?",
+    "title": ""
+  },
+  {
+    "era": "02-blog-2009-2016",
+    "category": "blog-index",
+    "relpath": "02-blog-2009-2016/mozambique-expedition-fe09-part01.md",
+    "path": "/blog_FE09_Mozambique_Part01.htm",
+    "ts": "20120920105929",
+    "orig": "http://www.fieldgemology.org/blog_FE09_Mozambique_Part01.htm",
+    "title": ""
+  },
+  {
+    "era": "03-wordpress-relaunch-2017-2018",
+    "category": "wp-core",
+    "relpath": "03-wordpress-relaunch-2017-2018/articles-and-studies-index.md",
+    "path": "/articles-and-studies/",
+    "ts": "20170819143409",
+    "orig": "http://fieldgemology.org:80/articles-and-studies/",
+    "title": ""
+  },
+  {
+    "era": "03-wordpress-relaunch-2017-2018",
+    "category": "wp-core",
+    "relpath": "03-wordpress-relaunch-2017-2018/news-and-conference-index.md",
+    "path": "/news-and-conference/",
+    "ts": "20170823060951",
+    "orig": "http://fieldgemology.org:80/news-and-conference/",
+    "title": ""
+  },
+  {
+    "era": "03-wordpress-relaunch-2017-2018",
+    "category": "wp-core",
+    "relpath": "03-wordpress-relaunch-2017-2018/expeditions-to-myanmar.md",
+    "path": "/expeditions-to-myanmar/",
+    "ts": "20170818223724",
+    "orig": "http://fieldgemology.org:80/expeditions-to-myanmar/",
+    "title": ""
+  },
+  {
+    "era": "03-wordpress-relaunch-2017-2018",
+    "category": "wp-core",
+    "relpath": "03-wordpress-relaunch-2017-2018/expeditions-to-cambodia.md",
+    "path": "/field-expeditions/asia/expeditions-to-cambodia/",
+    "ts": "20170819144905",
+    "orig": "http://fieldgemology.org:80/field-expeditions/asia/expeditions-to-cambodia/",
+    "title": ""
+  },
+  {
+    "era": "03-wordpress-relaunch-2017-2018",
+    "category": "wp-core",
+    "relpath": "03-wordpress-relaunch-2017-2018/fe09-northern-mozambique.md",
+    "path": "/fe09-northern-mozambique/",
+    "ts": "20170823060942",
+    "orig": "http://fieldgemology.org:80/fe09-northern-mozambique/",
+    "title": ""
+  },
+  {
+    "era": "03-wordpress-relaunch-2017-2018",
+    "category": "wp-core",
+    "relpath": "03-wordpress-relaunch-2017-2018/fe09-part-06-kenya.md",
+    "path": "/fe09-part-06-kenya/",
+    "ts": "20170823104842",
+    "orig": "http://fieldgemology.org:80/fe09-part-06-kenya/",
+    "title": ""
+  },
+  {
+    "era": "03-wordpress-relaunch-2017-2018",
+    "category": "wp-core",
+    "relpath": "03-wordpress-relaunch-2017-2018/fe09-part-7-to-mozambique.md",
+    "path": "/fe09-part-7-to-mozambique/",
+    "ts": "20170824020305",
+    "orig": "http://fieldgemology.org:80/fe09-part-7-to-mozambique/",
+    "title": ""
+  }
+]

@@ -1,0 +1,469 @@
+---
+title: "fieldgemology.org where passion for gemology (gemmology) and traveling meets!."
+source_url: http://www.fieldgemology.org:80/Gemology%20kenya%20tsavo%20garnet.php
+capture_date: 2009-12-10
+wayback_snapshot: https://web.archive.org/web/20091210234723/http://www.fieldgemology.org:80/Gemology%20kenya%20tsavo%20garnet.php
+site_era: 01-original-site-2005-2009
+---
+
+|   
+---  
+[![](images/logo.jpg)](index.php)  
+|   
+|   
+
+## Thanks and disclaimer:  
+  
+[![](images/GIA-Lab-BKK.gif)](http://www.giathai.net/index.php)
+
+|  Important Note: The author: Vincent Pardieu is an employee of [GIA (Gemological Institute of America) Laboratory Bangkok ](http://www.giathai.net/) since Dec 2008. Any views expressed on this website - and in particular any views expressed by Vincent Pardieu - are the authors' opinions and do not necessarily reflect the opinions of [GIA ](http://www.gia.edu/3954/gia_home_page.cfm) or [GIA Laboratory Bangkok ](http://www.giathai.net/). GIA takes no responsibility and assumes no liability for any content on this website nor is GIA liable for any mistakes or omissions you may encounter. GIA is in particular not screening, editing or monitoring the content on this website and has no possibility to remove, screen or edit any content.   
+---  
+  
+  
+|  About FieldGemology. org  
+---  
+  
+This website is home for "Shameless Travel Addicted Gemologist" [Vincent Pardieu](http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&friendid=157008808) (B.Sc., GGA, G.G.). Vincent is "Supervisor, Field Gemology" at [GIA Laboratory Bangkok](http://www.giathai.net/index.php). He is a gemologist specialized on "origin determination of gemstones".   
+This is also home for Vincent's regular traveling companions: [David Bright](http://gemwanderings.googlepages.com/), [ Jean Baptiste Senoble](http://www.facebook.com/profile.php?id=723892893&ref=ts#/jbsenoble?ref=ts&__a=1), [Richard W. Hughes](http://www.ruby-sapphire.com/), Guillaume Soubiraa, [Walter Balmer](http://www.facebook.com/inbox/readmessage.php?t=1181047881164#/profile.php?id=544700651&ref=ts), [Michael Rogers](http://www.facebook.com/inbox/readmessage.php?t=1181047881164#/profile.php?id=723892893&ref=ts), [Kham Vannaxay](http://www.facebook.com/home.php?ref=logo#/kham.vannaxay?ref=ts&__a=1) and many others like recently: [Philippe Ressigeac](http://rubisetoiles.over-blog.com/), [Oliver Segura](http://fancysapphire.wordpress.com/2009/03/) , [Flavie Isatelle](http://gems-geology.webs.com/) and [Lou Pierre Bryl](http://www.facebook.com/inbox/readmessage.php?t=1181047881164#/profile.php?id=784862139&ref=ts).  We are gemologists (gemmologists) sharing a passion for gemstones, gemolology (gemmology), gem people and traveling. You will find in this website gemological expedition reports and some studies of gemological interest.  Visiting many gem mining areas we saw that people in remote mining and trading areas have difficulties to access to gemological publications. As today the Internet can be accessed in most of these gem mining areas and trading centers, the author started to build this website to give gem people living there the opportunity to see the result of the gemological expeditions they were associated in. It is a way to thanks them for their time and collaboration and to help them to get access to more gemological information. At the same time the author hope that these expedition reports will please the people from consuming countries interested in gemstones and fascinated by their mysterious origins. Our purpose here is to help people facing difficulties to get quality first hand information about gems and their origins to get the information they need through this website and its links. With our field expeditions to gemstone mines and gem markets around the world, we intend also here to share our passion for photography, gems and our fascination for the work of the "Gem People" bringing gemstones from the ground to magnificent jewelry.From the gems external beauty to the intimate beauty of gemstone inclusions, from gem lore to the mines, the people and the landscapes gems origin from, we expect to share with you our passion for gemstone beauty.We also invite you to join us on some gemological forums we are active in as they are convenient tools to get rapid answers to your questions as they are regularly visited by many other passionate gemologists, jewelers, hobbyists and professionals willing to learn more and share their knowledge about gemstones.  
+---  
+  
+  
+|  Website Map  
+---  
+  
+## Index page: Vincent Pardieu's Blog
+
+| [![](images/Index_logo.jpg)](index.php)  
+---  
+  
+About the Author  
+| [![](images/Vince_logo.jpg)](Biography_FG03.php) | About me : How did a countryside Frenchman became a "Shameless travel addicted gemologist"? ( Under construction)  
+---|---  
+  
+## Contact the author:
+
+## [Facebook](http://www.facebook.com/people/Vincent-Pardieu/698583335)  
+[Myspace](http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&friendid=157008808)  
+[Youtube](http://www.youtube.com/user/vincefieldgemology)
+
+## Write Comments:
+
+## [Fieldgemology Page on facebook](http://www.facebook.com/s.php?q=fieldgemology.org&n=-1&k=400000000010&sf=r&init=q&sid=29ff5e825cbf353fa7415ce88cab8fe7#/pages/fieldgemologyorg/35472755614?sid=29ff5e825cbf353fa7415ce88cab8fe7&ref=s)  
+  
+  
+
+## Popular Articles  
+
+![](images/tsavorite_logo.jpg)| ["Tsavorite, an Untamed Gem](Tsavorite_article.php)" with R.W.Hughes, first published in ICA's [InColor (Winter 2008)](http://openpub.realread.com/rrserver/browser?title=/ICA_001/INCOLOR_WINTER2009)  
+---|---  
+![](images/tanzanite_logo.jpg)| "[Working the blue seam](Tanzanite_article.php)" The Tanzanite mines of Merelani with R.W.Hughes first published on   
+[www.ruby-sapphire.com](http://www.ruby-sapphire.com/tanzania-tanzanite-mines.htm)  
+![](images/spinel_logo.jpg)| ["Spinel, the resurection of a Classic"](Spinel_article.php) with R.W. Hughes, first published in ICA's [InColor (Summer 2008)](http://openpub.realread.com/rrserver/browser?title=/ICA_001/INCOLOR_SUMMER2008)  
+  
+
+## Gemological studies  
+
+![](images/Batakundi_logo.jpg)| (Apr. 2009) "[Sapphires reportedly from Batakundi / Basil area](http://www.giathai.net/lab.php)" a preliminary study about unusual sapphires we saw at [GIA Laboratory Bangkok](http://www.giathai.net/lab.php)  
+---|---  
+![](images/Niassa_logo.jpg)| (Mar. 2009) "[Rubies from Niassa province, Mozambique](http://www.giathai.net/lab.php)" a preliminary study about rubies we saw at [GIA Laboratory Bangkok](http://www.giathai.net/lab.php)  
+![](images/Lead_Glass_logo.jpg)|  "[Lead glass filled rubies](http://www.fieldgemology.org/Ruby_lead_glass_treatment.pdf)" :   
+First published on [AIGS Lab Website](http://www.aigslaboratory.com/\(A\(lHgR2w-MyAEkAAAAYWZjMWM4MmEtY2E1Ny00N2U5LWFmYWYtOGI0MTk1MTk4ZjJmKTrHX0flgRzAaAMY29FHH43Fbrs1\)\)/FieldTripsDetail.aspx?tID=41) (Feb 2005)  
+  
+##   
+Expedition Reports  
+  
+
+![](images/VietnamMelo.jpg) | May. 2009: GIA Field Expedition FE08: Melos and their pearls in Vietnam. ([pdf file](http://www.giathai.net/pdf/Melo_Report_Vietnam_2009_June_12.pdf))  
+---|---  
+  
+  
+
+![](images/PailinVotha.jpg) | Dec. 2008 and Feb-Mar. 2009: GIA Field Expeditions FE01 and FE04: Rubies and sapphires from Pailin, Cambodia. ([pdf file](http://www.giathai.net/pdf/Public_Report_PR01_Pailin.pdf))  
+---|---  
+  
+  
+
+![](images/mada2008.jpg) | Aug. 2008: Sapphires and Tsavorite from the south of Madagascar with the AFG (Association francaise de Gemmologie) : Available soon...   
+---|---  
+  
+  
+
+![](images/Winza_logo.jpg) | [Apr. 2008: Expedition to the new Winza ruby deposit in central Tanzania](http://www.fieldgemology.org/Gemology%20tanzania%20ruby%20sapphire%20dodoma%20mpwapwa%20winza.php) with Jean Baptiste Senoble and the support of the Gubelin Gem Lab   
+---|---  
+  
+  
+
+![](images/mergui_logo.jpg)| [Dec. 2007: Expedtion to a cultured south Sea pearl farm in Mergui archilepelago, Burma (Myanmar)](http://www.fieldgemology.org/Gemology%20burma%20myanmar%20mergui%20pearl%20south%20sea.php) with Kham Vannaxay and Christian Dunaigre   
+---|---  
+  
+  
+
+**October 2007:** Gemological expedition to East Africa (Kenya and Tanzania) with Richard W. Hughes, Mike Rogers, Guillaume Soubiraa, Warne and Monty Chitty and Philippe Bruno:  
+---  
+![](images/Tanzania_logo.jpg)| Oct. 2007: Expedition to Tanzania gem mines:  
+[\- Part 1: Gems from central and south Tanzania](http://www.fieldgemology.org/gemology%20tanzania%20ruby%20sapphire%20spinel%20tsavorite%20alexandrite%20emerald%20tunduru%20songea%20morogoro%20merelani.php) [  
+](Tanzania01_FG03.php)[\- Part 2: Gems from North Tanzania](http://www.fieldgemology.org/gemology%20tanzania%20tsavorite%20alexandrite%20emerald%20tourmaline%20merelani%20lendanai%20lemshuko%20manyara.php)  
+---|---  
+![](images/Kenya_logo.jpg)| [Introduction to Kenya](http://www.fieldgemology.org/gemology%20kenya%20ruby%20tsavorite%20tsavo%20baringo%20taita%20mengare%20kuranze%20kasigau.php)  
+  
+Simba:[  
+A visit to the Simba ruby deposit](http://www.fieldgemology.org/Gemology%20kenya%20ruby%20simba.php)  
+  
+Baringo:   
+[A visit to the "Corby" ruby mine](http://www.fieldgemology.org/Gemology%20kenya%20baringo%20ruby%20corby.php)   
+  
+Tsavo: Rubies from the "John Saul Ruby Mine":   
+[A visit to the "Rockland" mine](http://www.fieldgemology.org/Gemology%20kenya%20tsavo%20ruby%20rockland.php)   
+  
+Tsavo: Rubies from the former "Penny Lane":  
+[A visit to the "Aqua" mine ](http://www.fieldgemology.org/Gemology%20kenya%20tsavo%20ruby%20aqua.php)  
+[A visit to "Equator" mine](http://www.fieldgemology.org/Gemology%20kenya%20tsavo%20ruby%20equator.php)   
+[A visit to "Hard Rock" mine](http://www.fieldgemology.org/Gemology%20kenya%20tsavo%20ruby%20hardrock.php)   
+  
+Tsavorite from Tsavo:   
+[A visit to the "Tsavolite" mine](http://www.fieldgemology.org/Gemology%20kenya%20tsavo%20tsavorite%20travolite.php)  
+[A visit to the "Bocrest" mine](http://www.fieldgemology.org/Gemology%20kenya%20tsavo%20tsavorite%20bocrest.php)  
+[A visit to the "Nadan" mine](http://www.fieldgemology.org/Gemology%20kenya%20tsavo%20kuranze%20tsavorite%20nadan.php)  
+[A visit to the "Baraka" mine](http://www.fieldgemology.org/Gemology%20kenya%20tsavo%20tsavorite%20baraka.php)  
+[A visit to "Bridges" mine](http://www.fieldgemology.org/Gemology%20kenya%20tsavo%20tsavorite%20bridges.php)  
+  
+Tsavo Color Change garnets:  
+[A visit to the "Manoa" mine](http://www.fieldgemology.org/Gemology%20kenya%20tsavo%20garnet.php)  
+  
+  
+
+**Summer 2006:** Expeditions to Central Asia gem wealth with Guillaume Soubiraa and the support of the AIGS, the ICA and the Gubelin Gem Lab:   
+---  
+![](images/Central_Asia_logo.jpg)| [\- Introduction to the 2006 expeditions.](http://www.fieldgemology.org/gemology%20central%20asia%202006.php)   
+  
+[\- Pakistan 2006: Visit to the Peshawar gem market, the Swat emerald mines and the Nangimali "Kashmir ruby" mines.  
+](http://www.fieldgemology.org/gemology%20pakistan%20ruby%20emerald%20kashmir%20swat.php)  
+[\- Afghanistan 2006: A visit to the Panjshir valley emeralds mines and the Jagdalek ruby mines.](http://www.fieldgemology.org/gemology%20afghanistan%20ruby%20jagdalek%20emerald%20panjshir.php)  
+  
+[\- Tajikistan 2006: A visit to the Pamirs (Badakshan) the Kul I Lal spinel mines and the Murgab ruby mines.   
+](http://www.fieldgemology.org/gemology%20tajikistan%20ruby%20spinel%20pamir.php)  
+"[Gems from the roof of the world](http://openpub.realread.com/rrserver/browser?title=/ICA_001/InColor_spring07)" First published in ICA' [InColor (Spring 2007)](http://openpub.realread.com/rrserver/browser?title=/ICA_001/InColor_spring07)  
+  
+"[Moon Over the Pamirs](Pamirs_ruby_spinel_tajikistan.php)": Chasing Ruby and Spinel in Tajikistan with R.W. Hughes first published on [www.ruby-sapphire.com](http://www.ruby-sapphire.com/tajikistan_ruby_and_spinel.htm)  
+  
+[\- China: A visit the the new emerald deposit on the Silk Road: The Davdar emerald mines (Xin Jiang) ](http://www.fieldgemology.org/gemology%20china%20emerald%20davdar.php)  
+---|---  
+  
+  
+
+![](images/Colombia_logo.jpg)| **Oct. 2005** :[ Colombia](http://www.fieldgemology.org/gemology%20colombia%20emerald.php) by J.B. Senoble  
+---|---  
+  
+  
+
+![](images/Madagascar2005_logo.jpg)| **Sep. 2005:** Madagascar with Richard W. Hughes and Dana Schorr (Will be available one of these days...)   
+---|---  
+  
+  
+
+**Summer 2005:** Gemological expeditions to South East Asia (Vietnam) South Asia (Sri Lanka) and East Africa (Kenya, Madagascar and Tanzania) with J.B. Senoble and Tanguy Lagache with the support of the AIGS, the ICA and the Gubelin Gem Lab:   
+---  
+![](images/Summer2005_logo.jpg)| \- Introduction to AIGS/ICA/Gubelin Gem lab 2005 Expeditions  
+  
+\- [Tanzania 2005:   
+Arusha, Longido, Merelani, Lemeshuko, Umba, Morogoro, Mahenge, Songea, Tunduru](http://www.fieldgemology.org/gemology%20tanzania%202005.php)  
+  
+\- [Kenya 2005:   
+Tsavo, Kuranze, Taita Hills, Simba, Baringo](http://www.fieldgemology.org/gemology%20kenya%202005.php)  
+  
+\- [Madagascar 2005:  
+Ambohimandroso, Ilakaka, Sakaraha, Andranondambo, Vatomandry, Andilamena, Ambondromifehy](http://www.fieldgemology.org/gemology%20madagascar%202005.php)  
+  
+Madagascar trilogy  
+(Colored Stone Magazine):   
+Part 1:[ Jan/Feb 2006 issue](http://www.colored-stone.com/stories/jul06/madagascar1.cfm)  
+Part 2:[ Mar/Apr 2006 issue](http://www.colored-stone.com/stories/jul06/madagascar2.cfm)  
+Part 3: [ Jul/Aug 2006 issue](http://www.colored-stone.com/stories/jul06/madagascar3.cfm)  
+  
+\- [Sri Lanka 2005:  
+Ratnapura, Okkampitaya, Bibile, Elahera, Metiyagoda](http://www.fieldgemology.org/gemology%20sri%20lanka%20ceylon%202005.php)  
+  
+\- [Vietnam 2005:  
+Hanoi, Yen Bai, Luc Yen, Ha Long Bay, Quy Chau](http://www.fieldgemology.org/gemology%20vietnam%202005.php)  
+---|---  
+  
+  
+  
+\- **Feb. 2005:** A visit to Thailand, Cambodia with the AFG (Association Francaise de Gemmologie) (under construction)   
+  
+\- **2002-2007:** Expeditions to Pailin (Cambodia), Chanthaburi Kanchanaburi (Thailand) Houay Xai (Laos) Mogok, Namya (Burma) (under construction)   
+  
+-**2001:** Expeditions to Namya, Hpakant and then Mogok with Ted and Angelo Themelis and Hemi Englisher (under construction)   
+
+## Find our blogs using the following Keywords:   
+  
+---  
+  
+## Discover fieldgemology newsletter:   
+(Currently under "hibernation status"...) 
+
+##   
+[Number 01: Sept 2006  
+](/newsletter/file/fieldgemologynewsletter01.htm)(I know: it was long time ago...)   
+  
+| |   
+  
+| Links  
+---  
+  
+##   
+Special THANKS for their support   
+for our field expeditions since 2005:
+
+  
+| [![](images/GIAbkk.gif)](http://www.giathai.net/index.php)| [![](images/ruby-sapphire150.jpg)](http://www.ruby-sapphire.com)  
+---|---  
+[](http://www.giathai.net/index.php)[![](images/ICA.gif)](http://www.gemstone.org/)| [](http://www.giathai.net/index.php)[![](images/AFG.gif)](http://www.afgemmologie-lyon.fr//)  
+[![](images/gubelinlogo.jpg)](http://www.gubelinlab.com)| [![](images/banneraigs.jpg)](http://www.aigslaboratory.com)  
+  
+  
+
+## Any QUESTIONS?
+
+about gems, gemology, field expeditions, studying gemology, minerals, jade, pearls or jewelry?  
+We recommend these  FORUMS   
+where the author is contributing:
+
+  
+  
+[![](images/geminterest150.jpg)](http://www.geminterest.com/board/index.php)| [![](images/gemologyonline150.jpg)](http://gemologyonline.com/Forum/phpBB2/index.php)  
+---|---  
+[![](images/mindat150.jpg)](http://www.mindat.org/forum.php)| [![](images/friendsofjade150.jpg)](http://www.friendsofjade.org/group-discussion/)  
+[![](images/pearlguide150.jpg)](http://www.pearl-guide.com/forum/index.php)| [![](images/ganoksin150.jpg)](http://www.ganoksin.com/orchid/orchid.htm)  
+  
+## Do you want to  
+STUDY GEMOLOGY?  
+  
+Here are some recommended institutes where the author studied gemology in Thailand ... and was happy about his investment!  
+
+  
+[![](images/giathailand.jpg)](http://www.giathailand.com/index.htm)| [![](images/aigsthailand.jpg)](http://www.aigsthailand.com/)  
+---|---  
+  
+
+For those willing to go further after their gemological studies: Recommended Advanced Gemological Courses:  
+  
+[![](images/gemnantes.jpg)](http://www.gemnantes.fr/)| [![](images/SSEF.jpg)](http://www.ssef.ch/)  
+---|---  
+[  
+](http://www.aigslaboratory.com)To finish here are some BOOKS about gemology   
+the author have read and appreciated and would like to recommend to people willing to learn more about gemstones, gemology and the places where gemstones are found:  
+  
+[![](images/rubysapphire.jpg)](http://www.ruby-sapphire.com/)| [![](images/photoatlas.gif)](http://photoatlas.microworldofgems.com/)| [![](images/photoatlasvol2.jpg)](http://photoatlas-vol2.microworldofgems.com/)| [![](images/Emerald_Ringsrud_small.jpg)](http://www.emeraldpassion.com/)  
+---|---|---|---  
+[![](images/secretsof.jpg)](http://www.secretsofthegemtrade.com/index.htm)| [![](images/mogokted.jpg)](http://www.themelis.com/P-Book-Mogok-1.htm)| [![](images/mogok2.jpg)](http://www.themelis.com/P-Book-Mogok-2.htm)| [![](images/vfinlay.jpg)](http://www.amazon.com/Buried-Treasure-Victoria-Finlay/dp/0340830123)  
+  
+  
+  
+  
+## 
+
+  
+  
+  
+[  
+[![Creative Commons License](http://i.creativecommons.org/l/by-nc-nd/3.0/us/88x31.png)  
+](http://creativecommons.org/licenses/by-nc-nd/3.0/us/)  
+The photos and articles on fieldgemology.org are licensed under a [Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 United States License.](http://creativecommons.org/licenses/by-nc-nd/3.0/us/)  
+Feel free to use the photos and articles with links and credits. No commercial use without permission.  
+All the best,  
+  
+](http://creativecommons.org/licenses/by-nc/3.0/)  
+  
+|  |  |  |  |   
+---|---|---  
+| ****  
+  
+| ![](images/con2_up_left.gif) | ![](images/spacer.gif) | ![](images/con2_up_right.gif)  
+---|---|---  
+![](images/spacer.gif)  
+![](images/spacer.gif) | ![](images/spacer.gif) |  |   
+The "Manoa" Color change garnet mine,  
+Taita Hills, Tsavo, Kenya  
+Text by   
+Vincent Pardieu ([Gubelin Gem Lab](http://www.gubelinlab.com/), Lucerne, Switzerland)  
+  
+Photos by  
+Vincent Pardieu,   
+Guillaume Soubiraa,  
+Michael Rogers  
+| [![](/images/gubelinapatitelogo.jpg)](http://www.gubelinlab.com/) |  The 2005 and 2007 expeditions were supported by the [Gubelin Gem Lab](http://www.gubelinlab.com/) located in Luzern, Switzerland, as the 2005 expedition was financed by the Gubelin Gem Lab and the AIGS Gemological Laboratory in Bangkok, Thailand and, because at the time of the 2007 expedition the author was working at the Gubelin Gem Lab as a gemologist.   
+---|---  
+  
+**A visit at the "Manoa" color change garnet mine:  
+**  
+Color change garnet were reported by the local miners to have been discovered at Manoa ([03°36'42"S 38°20'14"E](http://www.fieldgemology.org/Google%20Earth%20links/ColorChangeGarnetMine.kmz)) in 2004 by Hussein Peter Nyambu, a local farmer. Currently the area is mined by a partnership between H.P.Nyambu, the owner of the land and Justin Ndeke, the owner of the mining licence.  Color change garnet was reported to be found in pockets associated with quartz and mice. The miners told us that the mining is performed following the quartz veins. At the time of our visit on Oct 06, 2007 eight miners were working the area using simple hand tools. They reported that from the time of the discovery to the day of our visit about 200 kilos of rough gem material was collected.  
+Some of the stones we saw were displaying an interesting color change from greenish to brownish as you can see on the following photos.   
+  
+  
+---  
+![](/minephotos/garnet/color-change-garnet-01.jpg)  
+---  
+  
+Mike Rogers and the author on the way to the color change garnet mine at Manoa on Oct 06th 2007.  | ![](/minephotos/garnet/color-change-garnet-02.jpg)  
+---|---  
+![](/minephotos/garnet/color-change-garnet-03.jpg)  
+---  
+  
+Mining at the Manoa mine is performed using very simple tools. | ![](/minephotos/garnet/color-change-garnet-04.jpg)  
+---|---  
+![](/minephotos/garnet/color-change-garnet-05.jpg)  
+---  
+  
+A group of miners searching for gems at Manoa, Kenya. | ![](/minephotos/garnet/color-change-garnet-06.jpg)  
+---|---  
+![](/minephotos/garnet/color-change-garnet-07.jpg)  
+---  
+![](/minephotos/garnet/color-change-garnet-08.jpg)  
+---  
+  
+To reach the gem rich layer the miner first remove all the overburden. | ![](/minephotos/garnet/color-change-garnet-09.jpg)  
+---|---  
+  
+A parcel of color change garnets from the Manoa mine. Some of the stones (on the right) are coming from the detrictic deposit covering the hard rock deposit while the others were collected in the primary deposit located just under. | ![](/minephotos/garnet/color-change-garnet-10.jpg)  
+---|---  
+![](/minephotos/garnet/color-change-garnet-12.jpg)  
+---  
+![](/minephotos/garnet/color-change-garnet-11.jpg)  
+---  
+![](/minephotos/garnet/color-change-garnet-13.jpg)  
+---  
+![](/minephotos/garnet/color-change-garnet-14.jpg)  
+---  
+[![](/images/gubelinapatitelogo.jpg)](http://www.gubelinlab.com/) |  Finaly I dont want to forget to thanks the [Gubelin Gem Lab](http://www.gubelinlab.com/) in Luzern, Switzerland, my fellow gemologists and colleagues working there for their support in the realization of this expedition.  
+---|---  
+**  
+Notes about the Kenya gemstone mines pages (written in Oct 2008)**  
+  
+These "Gemstone mines of Kenya" web pages presents the result of the two gemological expeditions to East Africa in Jul. and Aug. 2005 and Oct. 2007. They were build with the support of ICA (The International Colored Stone Association) and particularly of ICA ambassador to Kenya Suzie Kennedy and her husband Kennedy Khamwati for the Kenya part.   
+The Jul. and Aug. 2005 expedition was a join expedition by the AIGS gemological Laboratory in Bangkok, Thailand (where I was then the Laboratory Director) and the Gubelin Gem Lab, in Lucerne Switzerland. I was then traveling with Jean Baptiste Senoble, one of my former AIGS gemology student, working as I write these words in 2008 for Nomad's Co Ltd, a Bangkok based gem dealer.  
+The Oct 2007 expedition was also part of a larger expedition to East Africa I lead in collaboration with gemologist Richard W. Hughes. I was then gemologist for the Gubelin Gem Lab. Two young gemologist and former AIGS students: Guillaume Soubiraa and Michael Rogers joined me in this expedition as well as One of Guillaume Soubiraa friends from Madagascar: Philippe Brunot. To help us in the field we had the support of ruby and tsavorite miner Genson Micheni Musa, the owner of the Tsavolite mine near Tsavo.  The purpose of these expeditions was to visit ruby, sapphire, alexandrite, emerald, tsavorite, tanzanite and tourmaline mines in Kenya and Tanzania for gemological research purpose. Origin determination of gemstones like rubies and sapphires is an important part of the daily work at the Gubelin Gem Lab and it is important for a gemologist specialized in origin determination of gemstones to collect data directly at the source in order keep his knowledge of the world gemstone mining areas updated. As a former tour guide, turned into a gemologist, it is my pleasure to share the benefit of these expeditions with you and I hope that it will benefit to the people who welcomed and helped us in the field. Please visit the other Kenya pages on fieldgemology.org:  1 a) [Kenya, a Gemstone safari: Kenya main page](gemology%20kenya%20ruby%20tsavorite%20tsavo%20baringo%20taita%20mengare%20kuranze%20kasigau.php)  
+  
+1 b) [Kenya, Summer 2005 expedition report. ](gemology%20kenya%202005.php)  
+  
+2) On the way to Tsavo: [The Simba ruby mine: ](Gemology%20kenya%20ruby%20simba.php)  
+  
+3 ) [Tsavo, Mengare Swamp: The "Rockland" (former "John Saul") ruby mine.](http://www.fieldgemology.org/Gemology%20kenya%20tsavo%20ruby%20rockland.php)   
+  
+4 ) [Tsavo, Mengare swamp: The "Aqua" (former "Penny Lane") ruby mine.](http://www.fieldgemology.org/Gemology%20kenya%20tsavo%20ruby%20aqua.php)  
+  
+5 ) [Tsavo, Mengare Swamp: The "Equator" ruby mine.](http://www.fieldgemology.org/Gemology%20kenya%20tsavo%20ruby%20equator.php)  
+  
+6) [Tsavo, Mengare Swamp: The "Hard Rock" ruby mine.](http://www.fieldgemology.org/Gemology%20kenya%20tsavo%20ruby%20hardrock.php) 7) Spinels from Kasigau: 8) [The Tsavolite Tsavorite mine:](http://www.fieldgemology.org/Gemology%20kenya%20tsavo%20tsavorite%20travolite.php)  
+  
+9) [The Bocrest Tsavorite mine:](http://www.fieldgemology.org/Gemology%20kenya%20tsavo%20tsavorite%20bocrest.php)  
+  
+10 ) [The Nadan Tsavorite mine](Gemology%20kenya%20tsavo%20kuranze%20tsavorite%20nadan.php)  
+  
+11) [The Baraka Tsavorite mine ](http://www.fieldgemology.org/Gemology%20kenya%20tsavo%20tsavorite%20baraka.php)  
+  
+12) [The Scorpion Tsavorite mine](http://www.fieldgemology.org/Gemology%20kenya%20tsavo%20tsavorite%20bridges.php) 13) [Color change garnets: ](Gemology%20kenya%20tsavo%20garnet.php)  
+  
+14) [The Baringo ruby mine:](Gemology%20kenya%20baringo%20ruby%20corby.php)  
+---  
+  
+**Interesting****Links and recommended readings about gemstones mining in Kenya:  
+**  
+"[Gemstones and Jewelry in Kenya, 2005](http://www.epzakenya.com/UserFiles/File/Gemstonekenya.pdf)" from the Kenyan EPZA "Export Processing Zones Authority"  
+"[The mineral industry of Kenya and Uganda, 2002](http://minerals.usgs.gov/minerals/pubs/country/2002/keugmyb02.pdf)" by Thomas R. Yager   
+"[The mineral industry of Kenya, 1998](http://minerals.usgs.gov/minerals/pubs/country/1998/9219098.pdf)" by Philip M. Mobbs  
+"Kenya, a mining journal supplement, 2007" by [Mining Communications Ltd 2007](http://www.mining-journal.com/Home.aspx), London  
+"[The ICA 2006 World Colored Gemstone Mining Report](http://openpub.realread.com/rrserver/browser?title=/ICA_001/ICA06_Mining_Report)", InColor, Spring 2006  
+  
+**Interesting****Links and recommended readings about ruby and sapphire from Kenya:**  
+  
+"[Geology of sapphire and ruby deposits - The example of the John Saul Ruby Mine, Mangare, Kenya](http://www.kasigau.fr/pages/thesispag.html)": The PHD thesis of Dr Cedric Simonet. A must to read work for those interesting in Kenyan ruby and sapphire deposits.  
+"[General setting of coloured gemstone deposits in the Mozambique Belt of Kenya](http://www.kasigau.fr/pages/referencespag.html)" and other publications about gem deposits in Kenya on Cedric Simonet's kasigau.fr website.   
+"[Geologie and gem deposits of Kenya](http://mines.acp.int/html/KE_gisements_fr.html)"  
+"[The Kimbo ruby deposit](http://www.kasigau.fr/pages/kimbo1pag.html)": An excellent study of the John Saul mine by Dr Cedric Simonet, a former manager of the mine for Hard Rock Mining.  
+"[The John Saul Ruby mine](http://www.swalagemtraders.com/news/2008/02/06/5-ruby-the-john-saul-ruby-mine-jsrm)": On Swala Gem Traders website, an interesting article about the discovery of rubies in Tsavo by American geologist John Saul.  
+"[Savanna rubies ](http://www.creativegem.com/gem_deals/html/savana.htm)": by Creative Gems, an interesting attempt to brand rubies from Tsavo.   
+"[With Open arms](http://www.colored-stone.com/stories/nov06/kenya.cfm)" A Kenyan farmer found precious bounty in his barren fields. By Denis Maina Gathanju  
+"Star sapphire from Kenya", N.R. Barot, A.Flamini, G.Graziani, E.J. Gubelin, Journal of gemmology, 1989,21,8  
+"A new sapphire deposit, turkana, Kenya", T. Themelis, Gemological Digest, Vol.2,No.4,1989   
+"The Growth of rubies in south -east Kenya" R.M. Key and J.O. Ochieng, Journal of Gemmology,1991,22,8  
+"Pink sapphire from Kitui, Kenya", Dr N.R. Barot and Dr R.R. Harding, Journal of gemmology,1994,24,3  
+"Chemical fingerprinting of some East African gem rubies by Laser Ablasion ICPMS" A.H. Rankin, J. Greenwood, D. Hargreaves, Journal of gemmology, 2003,28,8,pp.473-482  
+"Kenyan rubies exported to Thailand", Gems and gemology, Winter 1986, p.247  
+"Update on ruby output in Kenya", Jewelry News Asia, No170, October 1998, p.63  
+"An update on the John Saul ruby mine", Gems and gemology, Winter 1999, pp.213-214  
+"Exotic origin of the ruby deposit of the Mangari arera in SE Kenya" A.Mercier, P.Debat, J.M. Saul, Ore Geology reviews, Vol.14,1999,pp.83-104  
+"The Dusi (Garba Tula) sapphire deposit, central Kenya - A unique Pan African corundum-bearing monzonite" C.Simonet, J.L. Paquette, C.Pin, B. Lasnier, E. Fritsch, Journal of African Earth Sciences, Vol.38,No.4,2004,pp.401-410  
+"Saphirs et rubis, Classification des gisements de Corindon", Le Regne Mineral, No.55, Jan-Fev. 2004   
+"Rubin, Saphir, Korund, Schon, Hartselten, kostlar", extraLapis No15, 1998  
+  
+**Interesting Links and Bibliography about Tourmaline in Kenya:**  
+  
+"Golden tourmaline from Kenya" Gems and Gemology, Summer1996, pp.135-136  
+"Colour-changing chromiferous tourmalines from East Africa" Prof. Dr H. Bank, Dr U.Henn, Journal of gemmology, 1988,21,2,pp.102-103  
+"Geology of theYellow mine (Taita-Taveta district, Kenya) and other yellow tourmaline deposits in East Africa" Dr.C.Simonet, Journal of gemmology, 2000,27,1,pp.11-29  
+"Les tourmalines magnesiennes d'Afrique de l'Est", C.Simonet, Revue de gemmologie AFG, Septembre 2006, pp.4-7  
+  
+**Interesting Links and Bibliography about Tsavorite:  
+**  
+"[Tsavorite USA Inc](http://www.tsavorite.com/)": Scottish Geologist Campbell Bridges website.  
+"[My road to the discovery of Tsavorite](http://openpub.realread.com/rrserver/browser?title=/ICA_001/INCOLOR_Summer2007)", Campbell Bridges, InColor, 2007.  
+"[Tsavorite Garnet, King of African Gems](http://www.secretsofthegemtrade.com/articles_12.htm)" an interesting article by American jeweler Richard W.Wise.   
+"[Tsavorite](http://www.palagems.com/tsavorite_bancroft.htm)" by Peter Bancroft, and its "tsavorite Buying Guide by Richard Hughes on Pala website.  
+"[Giant size top color clean tsavorite discovered in East Africa](http://www.multicolour.com/tsavorite/)" by D. Weinberd on Multicolour website.   
+"[Tsavorite](http://www.tsavorite.cc/)" a blog type page about tsavorite by Multicolour  
+"[Tsavorite buying guide](http://www.lapigems.com/tsavorite_buying_guide.asp)", an interesting page by Lapigems.   
+"[Tsavorite](http://www.gemstone.org/gem-by-gem/english/tsavorite.html)", by ICA website.  
+"[World Colored Gemstone Mining Report 2006](http://openpub.realread.com/rrserver/browser?title=/ICA_001/ICA06_Mining_Report)" By the International Colored stone Association (ICA)   
+"[History of Tsavorite](http://www.davismining.com/history.html)" about tsavorite from the Lualenyi mine, the former Peter Morgan mining operation.  
+"[The Saul's Tsavorite mine, Komolo, Tanzania](http://gemme.la.rca.free.fr/tsavorite-mine-tanzania/index-eng.html)" an interesting report by Yannick Mandaba.  
+"[The Lemshuko Tsavorite mine](http://www.swalagemtraders.com/tsavorite-mine.php)" by the Saul brothers on Swala Gem Traders website.   
+"Tsavorite, Une pierre africaine", By Vincent Pardieu, Revue de Gemmologie AFG, 2005  
+"Le grenat vert tsavorite: Presentation et debat", C. Bridges, Revue de gemmologie AFG No161, Septembre 2007, pp.4-7  
+"Well formed tsavorite gem crystals from Tanzania" By R.E Kane, A.R. Kampf, H. Krupp, [Gems & Gemology](http://www.gia.edu/gemsandgemology/70/main_page.cfm), Summer 1990, pp142-148  
+"Un grenat vert, la tsavorite" by S. Heppe, Revue de Gemmologie AFG N 99, June 1989, pp 5-7   
+"Large tsavorite and green grossular from Tanzania" [Gems & Gemology](http://www.gia.edu/gemsandgemology/70/main_page.cfm), Spring 2004, pp72-73  
+"A new source for Tsavorite" about the Ruangwa (South Tanzania) deposit. [Gems & Gemology](http://www.gia.edu/gemsandgemology/70/main_page.cfm), Summer 1999, pp151-152  
+"Gem Weath of Tanzania" by Dirlam & Al, [Gems & Gemology](http://www.gia.edu/gemsandgemology/70/main_page.cfm), Summer 1992, pp80-101  
+"Gemstones of East Africa" By Peter C. Keller, 1992, ISBN 0-945005-08-3  
+"[Green grossularite garnets (tsavorites) in East Africa](http://lgdl.gia.edu/pdfs/gemsandgemology/freebackissues/summer_1974.pdf)" by C. Bridges, [Gems & Gemology](http://www.gia.edu/gemsandgemology/70/main_page.cfm), Summer 1974   
+"[Composition of Green Garnet from Tanzania and Kenya](http://lgdl.gia.edu/pdfs/gemsandgemology/freebackissues/summer_1974.pdf)" by G.S.Swizter, [Gems & Gemology](http://www.gia.edu/gemsandgemology/70/main_page.cfm), Summer 1974  
+"Gem quality grossular garnets" By V.Manson, C.M. Stockton, [Gems & Gemology](http://www.gia.edu/gemsandgemology/70/main_page.cfm), 1982   
+"Sapphire and Garnet from Kalalani, Tanga province, Tanzania" by A.V.Siefert, J.Hyrsl, [Gems & Gemology](http://www.gia.edu/gemsandgemology/70/main_page.cfm) Summer 1999.   
+"[Note on the Geology and mineral resources of the Mtito Andei - Taita area](http://www.uibk.ac.at/downloads/oegg/Band_73_135_152.pdf)" by W Pohl and A. Horkel, 1980   
+  
+**More about the large "[Tsavorite One](http://www.tanzaniteone.com/announcements/Tsavorite2210007.asp?id=57)" project by "[Tanzanite One](http://www.tanzaniteone.com/)":**  
+  
+"[The Tsavorite One Project](https://secure.digitallook.com/cgi-bin/digitalcorporate/msn/security.cgi?csi=104247&action=news&story_id=1684098&rns=1)"   
+"[TsavoriteOne project](http://www.tanzaniteone.com/pdf/TanzaniteOneFactsheetMW_to_client.pdf)" a Tanzanite One Factsheet.  
+"[The TsavoriteOne project and the Gemfield bid over Tanzanite One](http://www.mineweb.com/mineweb/view/mineweb/en/page37?oid=63327&sn=Detail)" Hot news...  
+"[Gemfields writes open letter to Tanzanite One Board](http://www.mineweb.net/mineweb/view/mineweb/en/page674?oid=63288&sn=Detail)" More hot news showing interest in Tsavorite.  **Interesting Books about Gemstones from Kenya:** | [![](/images/keller.jpg)](http://www.amazon.com/Gemstones-East-Africa-Peter-Keller/dp/0945005083) | "Gemstones from East Africa" by Peter C. Keller (1992)   
+---|---  
+[![](/images/rubysapphire.jpg)](http://www.ruby-sapphire.com/) | "Ruby and Sapphire" by Richard W. Hughes (1997)   
+---|---  
+  
+  
+**Interesting links and bibliography about Tsavo  
+  
+**"The Man-Eaters of Tsavo" by Colonel J.M. Patterson. Hardcover: 346 pages. Publisher: Saint Martin's Press (Jan 1986), ISBN: 0312510101  
+"The Lions of Tsavo: Exploring the Legacy of Africa's Notorious Man-Eaters" by Bruce D. Patterson. Hardcover: 324 pages. Publisher: McGraw-Hill Education (Sep 2003), ISBN: 0071363335  
+Romanticized Hollywood movie: The Ghost And The Darkness [1996] [1997]; DVD ~ Michael Douglas; Studio: Paramount Home Entertainment (UK); DVD Release Date: 3 Dec 2001; Run Time: 105 minutes****
+
+"[Man eaters of Tsavo](http://www.fieldmuseum.org/exhibits/exhibit_sites/tsavo/maneaters.html)": on the Chicago field Museum website where the two famous Tsavo man eaters are visible today.  
+["Tsavo National Park](http://www.kws.org/tsavo-east.html)": on the Kenya Wildlife Serive website. A very informative website for those willing to visit the area.   
+"[Earthwatch, Lions of Tsavo](http://www.youtube.com/watch?v=IH1us12KUhs)"  
+  
+To translate this page into your language: click on your language flag on the Babel fish icon   
+Nevertheless please understand that the translation might be incorrect as this translation tool is far to be perfect:  
+  
+![](images/spacer.gif) | ![](images/spacer.gif)  
+![](images/con2_bot_left.gif) | ![](images/spacer.gif) | ![](images/con2_bot_right.gif)  
+![](images/spacer.gif)  
+  
+|   
+|   
+---  
+| Important Note: Vincent Pardieu is an employee of [GIA (Gemological Institute of America) Laboratory Bangkok](http://www.giathai.net/) since Dec 2008. Any views expressed on this website - and in particular any views expressed by Vincent Pardieu - are the authors' opinions and do not necessarily reflect the opinions of [GIA](http://www.gia.edu/3954/gia_home_page.cfm) or [GIA Laboratory Bangkok](http://www.giathai.net/). GIA takes no responsibility and assumes no liability for any content on this website nor is GIA liable for any mistakes or omissions you may encounter. GIA is in particular not screening, editing or monitoring the content on this website and has no possibility to remove, screen or edit any content.  
+---  
+  
+|
