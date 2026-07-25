@@ -13,6 +13,7 @@ Run: python3 build_site.py   (needs: pip install beautifulsoup4 html2text markdo
 """
 import base64
 import gzip
+import html
 import json
 import os
 import re
@@ -137,7 +138,13 @@ ALIASES = {
     "/blog_display.php?key=sapphire": "02-blog-2009-2016/posts/sapphire",
 }
 
-LINK_RE = re.compile(r"(!?)\[([^\]]*)\]\(([^)\s]+)(?:\s+\"[^\"]*\")?\)")
+LINK_RE = re.compile(r"(!?)\[([^\]]*)\]\(((?:\\.|[^)])+?)(?:\s+\"[^\"]*\")?\)")
+
+def unescape_url(u):
+    """html2text backslash-escapes literal parens inside a URL so they
+    don't get mistaken for the closing ')' of the markdown link — undo
+    that once the URL has been captured out."""
+    return u.replace("\\(", "(").replace("\\)", ")")
 STRAY_PIPE_RE = re.compile(r"^[\s|]+$")
 
 def strip_stray_pipes(text):
@@ -202,22 +209,57 @@ def build():
             return ("wayback", absu)
         return None
 
+    def resolve_href_out(href, base_url):
+        """Absolute, always-usable href for a link: in-app route for pages we
+        archived, an absolute Wayback fallback for other fieldgemology.org
+        URLs, or the original target resolved to an absolute URL otherwise.
+        Never returns a bare relative path — those go nowhere from inside
+        this single page."""
+        res = resolve_link(href, base_url)
+        if res is None:
+            try:
+                return urljoin(base_url, href)
+            except Exception:
+                return href
+        kind, target = res
+        return f"#/page/{target}" if kind == "internal" else target
+
+    def img_src_out(src, base_url, capture_ts):
+        try:
+            absu = urljoin(base_url, src)
+        except Exception:
+            absu = src
+        return f"https://web.archive.org/web/{capture_ts}im_/{absu}" if capture_ts else absu
+
+    # Nested "image wrapped in a link" markdown — e.g. a nav logo/thumbnail
+    # linking to another page: [![alt](img.jpg)](target.php). The generic
+    # LINK_RE below cannot parse this nesting (it matches the inner image
+    # first and leaves the outer "](target.php)" as untouched literal text,
+    # so the outer href never gets rewritten and stays a dead relative
+    # path). Handle it explicitly, as raw HTML, before the generic pass.
+    NESTED_RE = re.compile(r"\[!\[([^\]]*)\]\(((?:\\.|[^)])+?)\)\]\(((?:\\.|[^)])+?)\)")
+
     def rewrite_links_and_images(text, base_url, capture_ts):
+        def repl_nested(m):
+            alt, imgsrc, linkhref = m.group(1), unescape_url(m.group(2)), unescape_url(m.group(3))
+            href_out = resolve_href_out(linkhref, base_url)
+            src_out = img_src_out(imgsrc, base_url, capture_ts)
+            alt_out = alt or os.path.basename(urlparse(src_out).path)
+            target_attr = "" if href_out.startswith("#") else ' target="_blank" rel="noopener"'
+            return (f'<a href="{html.escape(href_out)}"{target_attr}>'
+                    f'<img class="photo" src="{html.escape(src_out)}" alt="{html.escape(alt_out)}"></a>')
+        text = NESTED_RE.sub(repl_nested, text)
+
         def repl(m):
-            bang, label, href = m.group(1), m.group(2), m.group(3)
+            bang, label, href = m.group(1), m.group(2), unescape_url(m.group(3))
             if bang == "!":
-                try:
-                    absu = urljoin(base_url, href)
-                except Exception:
-                    absu = href
-                src = f"https://web.archive.org/web/{capture_ts}im_/{absu}" if capture_ts else absu
-                alt = label or os.path.basename(urlparse(absu).path)
-                return f'<img class="photo" src="{src}" alt="{alt}">'
-            res = resolve_link(href, base_url)
-            if res is None:
-                return f"[{label}]({href})"
-            kind, target = res
-            return f"[{label}](#/page/{target})" if kind == "internal" else f"[{label}]({target})"
+                src = img_src_out(href, base_url, capture_ts)
+                alt = label or os.path.basename(urlparse(src).path)
+                return f'<img class="photo" src="{html.escape(src)}" alt="{html.escape(alt)}">'
+            href_out = resolve_href_out(href, base_url)
+            if href_out.startswith("#"):
+                return f"[{label}]({href_out})"
+            return f'<a href="{html.escape(href_out)}" target="_blank" rel="noopener">{label}</a>'
         return LINK_RE.sub(repl, text)
 
     def split_blocks(text):
