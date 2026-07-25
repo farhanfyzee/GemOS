@@ -139,6 +139,7 @@ ALIASES = {
 }
 
 LINK_RE = re.compile(r"(!?)\[([^\]]*)\]\(((?:\\.|[^)])+?)(?:\s+\"[^\"]*\")?\)")
+AUTOLINK_RE = re.compile(r"<(https?://[^>\s]+)>")
 
 def unescape_url(u):
     """html2text backslash-escapes literal parens inside a URL so they
@@ -194,10 +195,50 @@ def build():
     for k, v in ALIASES.items():
         path_to_id.setdefault(k, v)
 
-    def resolve_link(href, base_url):
+    # The live fieldgemology.org domain is dead / squatted by an unrelated
+    # party today (see README "Death and domain drift"), so a link to any
+    # fieldgemology.org page we did NOT individually archive must never
+    # point at the live domain — it has to resolve to an actual Wayback
+    # Machine capture instead. Build that lookup from the full, unfiltered
+    # CDX index (cdx_full_index.json) captured during the original archive
+    # pass, so no extra network calls are needed at build time.
+    cdx_rows = json.load(open(f"{ARCHIVE}/cdx_full_index.json"))
+    cdx_by_path = {}
+    for ts, orig, status, mime in cdx_rows[1:]:
+        if status != "200":
+            continue
+        k = norm_path(orig)
+        if not k:
+            continue
+        cdx_by_path.setdefault(k, []).append((ts, orig))
+    for k in cdx_by_path:
+        cdx_by_path[k].sort()
+
+    def closest_wayback_url(target_url, near_ts):
+        k = norm_path(target_url)
+        candidates = cdx_by_path.get(k)
+        if not candidates:
+            # never captured under this exact path/query — hand off to
+            # Wayback's own "nearest capture" redirect rather than a dead
+            # direct link.
+            year = (near_ts or "2015")[:4]
+            return f"https://web.archive.org/web/{year}/{target_url}"
+        near = near_ts or "20150101"
+        ts, orig = min(candidates, key=lambda c: abs(int(c[0][:8]) - int(near[:8])))
+        return f"https://web.archive.org/web/{ts}/{orig}"
+
+    def resolve_link(href, base_url, capture_ts=None, own_pid=None):
         href = href.strip()
-        if not href or href.startswith("#"):
+        if not href:
             return None
+        if href.startswith("#"):
+            # A same-page anchor in the original (e.g. a table-of-contents
+            # jump to "#introduction"). We don't carry per-heading anchor
+            # ids into the reader, so the only safe resolution is "this
+            # page" — never let it fall through to urljoin, which would
+            # silently reconstruct a full link to the live (squatted)
+            # fieldgemology.org domain.
+            return ("internal", own_pid) if own_pid else None
         try:
             absu = urljoin(base_url, href)
         except Exception:
@@ -206,17 +247,23 @@ def build():
         if k in path_to_id:
             return ("internal", path_to_id[k])
         if "fieldgemology" in urlparse(absu).netloc.lower():
-            return ("wayback", absu)
+            return ("wayback", closest_wayback_url(absu, capture_ts))
         return None
 
-    def resolve_href_out(href, base_url):
+    def resolve_href_out(href, base_url, capture_ts=None, own_pid=None):
         """Absolute, always-usable href for a link: in-app route for pages we
-        archived, an absolute Wayback fallback for other fieldgemology.org
-        URLs, or the original target resolved to an absolute URL otherwise.
-        Never returns a bare relative path — those go nowhere from inside
-        this single page."""
-        res = resolve_link(href, base_url)
+        archived, an actual Wayback Machine snapshot for other
+        fieldgemology.org URLs (never the live domain — it's squatted by an
+        unrelated party today), or the original target resolved to an
+        absolute URL otherwise. Never returns a bare relative path — those
+        go nowhere from inside this single page."""
+        res = resolve_link(href, base_url, capture_ts, own_pid)
         if res is None:
+            if href.startswith("#"):
+                return "#/about"  # no page context to anchor to; don't leak a live URL
+            # resolve_link already ruled out fieldgemology.org hosts (those
+            # come back as "wayback" above) — anything left is a genuine
+            # external site, just needs to be absolute.
             try:
                 return urljoin(base_url, href)
             except Exception:
@@ -239,10 +286,10 @@ def build():
     # path). Handle it explicitly, as raw HTML, before the generic pass.
     NESTED_RE = re.compile(r"\[!\[([^\]]*)\]\(((?:\\.|[^)])+?)\)\]\(((?:\\.|[^)])+?)\)")
 
-    def rewrite_links_and_images(text, base_url, capture_ts):
+    def rewrite_links_and_images(text, base_url, capture_ts, own_pid=None):
         def repl_nested(m):
             alt, imgsrc, linkhref = m.group(1), unescape_url(m.group(2)), unescape_url(m.group(3))
-            href_out = resolve_href_out(linkhref, base_url)
+            href_out = resolve_href_out(linkhref, base_url, capture_ts, own_pid)
             src_out = img_src_out(imgsrc, base_url, capture_ts)
             alt_out = alt or os.path.basename(urlparse(src_out).path)
             target_attr = "" if href_out.startswith("#") else ' target="_blank" rel="noopener"'
@@ -250,13 +297,25 @@ def build():
                     f'<img class="photo" src="{html.escape(src_out)}" alt="{html.escape(alt_out)}"></a>')
         text = NESTED_RE.sub(repl_nested, text)
 
+        # Angle-bracket autolinks — <http://...> — are a separate markdown
+        # syntax from [label](url) and never touch LINK_RE below; without
+        # this pass they fall through to Markdown's own autolink handling
+        # completely unresolved, i.e. straight to the live domain.
+        def repl_autolink(m):
+            href = unescape_url(m.group(1))
+            href_out = resolve_href_out(href, base_url, capture_ts, own_pid)
+            if href_out.startswith("#"):
+                return f"[{href}]({href_out})"
+            return f'<a href="{html.escape(href_out)}" target="_blank" rel="noopener">{html.escape(href)}</a>'
+        text = AUTOLINK_RE.sub(repl_autolink, text)
+
         def repl(m):
             bang, label, href = m.group(1), m.group(2), unescape_url(m.group(3))
             if bang == "!":
                 src = img_src_out(href, base_url, capture_ts)
                 alt = label or os.path.basename(urlparse(src).path)
                 return f'<img class="photo" src="{html.escape(src)}" alt="{html.escape(alt)}">'
-            href_out = resolve_href_out(href, base_url)
+            href_out = resolve_href_out(href, base_url, capture_ts, own_pid)
             if href_out.startswith("#"):
                 return f"[{label}]({href_out})"
             return f'<a href="{html.escape(href_out)}" target="_blank" rel="noopener">{label}</a>'
@@ -322,12 +381,12 @@ def build():
 
     md = mdlib.Markdown(extensions=["tables", "sane_lists"])
 
-    def block_to_html(block, base_url, capture_ts):
+    def block_to_html(block, base_url, capture_ts, own_pid=None):
         md.reset()
         block = strip_stray_pipes(block)
         if not block.strip():
             return ""
-        rewritten = rewrite_links_and_images(block, base_url, capture_ts)
+        rewritten = rewrite_links_and_images(block, base_url, capture_ts, own_pid)
         try:
             return md.convert(rewritten)
         except Exception:
@@ -336,12 +395,12 @@ def build():
     chrome_html_cache = {}
     chrome_counter = [0]
 
-    def get_chrome_id(norm_text, raw_block, base_url, capture_ts):
+    def get_chrome_id(norm_text, raw_block, base_url, capture_ts, own_pid):
         if norm_text not in chrome_html_cache:
-            html = block_to_html(raw_block, base_url, capture_ts)
+            rendered = block_to_html(raw_block, base_url, capture_ts, own_pid)
             cid = f"c{chrome_counter[0]}"
             chrome_counter[0] += 1
-            chrome_html_cache[norm_text] = (cid, html)
+            chrome_html_cache[norm_text] = (cid, rendered)
         return chrome_html_cache[norm_text][0]
 
     rendered_pages = {}
@@ -356,12 +415,12 @@ def build():
 
         segments = []
         if pre_end > 0:
-            cids = [get_chrome_id(re.sub(r"\s+", " ", b).strip(), b, base_url, ts) for b in blocks[:pre_end]]
+            cids = [get_chrome_id(re.sub(r"\s+", " ", b).strip(), b, base_url, ts, pid) for b in blocks[:pre_end]]
             segments.append({"t": "c", "r": cids})
         for b in blocks[pre_end:suf_start]:
-            segments.append({"t": "u", "h": block_to_html(b, base_url, ts)})
+            segments.append({"t": "u", "h": block_to_html(b, base_url, ts, pid)})
         if suf_start < len(blocks):
-            cids = [get_chrome_id(re.sub(r"\s+", " ", b).strip(), b, base_url, ts) for b in blocks[suf_start:]]
+            cids = [get_chrome_id(re.sub(r"\s+", " ", b).strip(), b, base_url, ts, pid) for b in blocks[suf_start:]]
             segments.append({"t": "c", "r": cids})
 
         rendered_pages[pid] = dict(

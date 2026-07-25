@@ -672,8 +672,8 @@ function renderPage(id) {
         <span class="badge">${esc(p.relpath)}</span>
       </div>
       <div class="meta-links">
-        <div><span class="lbl">original url</span><a href="${esc(p.source_url)}" target="_blank" rel="noopener">${esc(p.source_url)}</a></div>
-        <div><span class="lbl">wayback</span><a href="${esc(p.wayback_snapshot)}" target="_blank" rel="noopener">view live snapshot ↗</a></div>
+        <div><span class="lbl">original url</span><span title="Not a live link — the domain is squatted today; use the Wayback link to actually view this page.">${esc(p.source_url)}</span></div>
+        <div><span class="lbl">wayback</span><a href="${esc(p.wayback_snapshot)}" target="_blank" rel="noopener">view archived snapshot ↗</a></div>
       </div>
     </div>
     <div class="prose">${body}</div>
